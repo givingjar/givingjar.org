@@ -1,0 +1,77 @@
+html {
+    background-color: #808080;
+}
+
+body {
+    font-family: "EstrangeloEdessaRegular", Arial, sans-serif;
+    font-size: 2em;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+nav {
+    height: 9rem;
+}
+
+.site-menu {
+    position: fixed;
+    left: 0;
+}
+
+.site-menu li {
+    padding: 0 0 0 2rem;
+}
+
+.site-menu li:first-child {
+    padding-left: 0;
+}
+
+.social-menu {
+    position: fixed;
+    right: 0;
+}
+
+.social-menu li {
+    padding: 0 0 0 0.8rem;
+}
+
+.menu {
+    margin: 0;
+    padding: 2.5rem;
+}
+
+.menu li {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 4rem;
+    height: 4rem;
+}
+
+.menu a.logo {
+    display: inline-block;
+    background-image: url(/images/svg/giving-jar-icon-7.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 1.4em;
+    padding-left: 4rem;
+    color: #ffffff;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+a.facebook:hover {
+    color: #3b5998;
+}
+
+a.twitter:hover {
+    color: #00aced;
+}
