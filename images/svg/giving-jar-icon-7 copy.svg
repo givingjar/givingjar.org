@@ -122,7 +122,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -176,7 +176,7 @@
            inkscape:connector-curvature="0"
            id="path4220"
            d="m 371.00501,223.6865 c -0.61993,0.18322 -1.05575,0.38821 -1.26573,0.61476 -2.23984,2.41658 -1.4694,31.81196 0.89733,34.23733 2.36672,2.42534 30.33382,2.47963 32.57365,0.063 2.23984,-2.41659 1.46903,-31.81329 -0.89769,-34.23865 -2.14485,-2.19797 -25.31498,-2.44759 -31.30756,-0.67648 z m 11.80969,3.04916 c 1.43067,-0.37534 3.0001,-0.56374 4.70909,-0.56374 1.90104,0 3.70494,0.23491 5.41067,0.70366 1.71875,0.46875 3.30071,1.15819 4.74603,2.06965 l 6.1e-4,4.19946 c -1.45834,-1.23697 -3.00787,-2.16803 -4.6485,-2.79303 -1.64062,-0.62501 -3.36625,-0.93789 -5.17615,-0.93789 -3.56772,0 -6.25,0.99637 -8.04687,2.98855 -1.78386,1.99219 -2.67582,4.96129 -2.67582,8.9066 0,3.93229 0.89116,6.89394 2.67502,8.88614 1.79687,1.99219 4.4804,2.98914 8.0481,2.98914 1.39323,0 2.63563,-0.1173 3.72938,-0.35168 1.09374,-0.24741 2.07766,-0.6255 2.95004,-1.13334 l 8e-5,-7.8315 -6.4455,-7.3e-4 -8e-5,-3.24244 10.35214,0.001 4e-5,12.51959 c -1.52343,1.08073 -3.20409,1.89992 -5.04003,2.45982 -1.83593,0.54688 -3.79559,0.82086 -5.87892,0.82087 -4.5573,-1e-5 -8.12451,-1.32805 -10.70263,-3.98429 -2.5651,-2.66928 -3.8477,-6.3804 -3.84771,-11.133 1e-5,-4.76563 1.28288,-8.47625 3.84799,-11.1325 1.61133,-1.6683 3.60858,-2.81487 5.99302,-3.44048 z"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Estrangelo Edessa';-inkscape-font-specification:'Estrangelo Edessa, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#33c3f0;fill-opacity:1" />
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Estrangelo Edessa';-inkscape-font-specification:'Estrangelo Edessa, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#87decd;fill-opacity:1" />
       </g>
       <g
          id="flowRoot4158"

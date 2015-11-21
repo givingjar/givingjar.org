@@ -1,16 +1,50 @@
 html {
     background-color: #808080;
+    background-image: url(/images/bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
 }
 
 body {
     font-family: "EstrangeloEdessaRegular", Arial, sans-serif;
+    color: rgba(255,255,255,0.9);
     font-size: 2em;
     line-height: 1.4;
-    font-weight: 400;
 }
 
 nav {
     height: 9rem;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #D1D1D1;
+}
+
+input[type="submit"] {
+    display: block;
+}
+
+input.email {
+    color: rgba(0,0,0,0.8);
+    width: 48rem;
+}
+
+@media (max-width: 750px) {
+    input.email {
+        width: 100%;
+    }
+}
+
+form.mail-subscribe {
 }
 
 .site-menu {
@@ -68,10 +102,7 @@ nav {
     font-weight: bold;
 }
 
-a.facebook:hover {
-    color: #3b5998;
-}
-
-a.twitter:hover {
-    color: #00aced;
+.mailing-list {
+    margin-top: 20%;
+    max-width: 50rem;
 }
