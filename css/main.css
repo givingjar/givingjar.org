@@ -36,15 +36,19 @@ input[type="submit"] {
 input.email {
     color: rgba(0,0,0,0.8);
     width: 45rem;
+    max-width: 100%;
 }
 
 @media (max-width: 750px) {
     input.email {
         width: 100%;
     }
-}
 
-form.mail-subscribe {
+    .mailing-form {
+        border-radius: 0.5rem;
+        background-color: rgba(0,0,0,0.6);
+        padding: 2rem;
+    }
 }
 
 .site-menu {
