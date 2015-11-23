@@ -35,7 +35,7 @@ input[type="submit"] {
 
 input.email {
     color: rgba(0,0,0,0.8);
-    width: 48rem;
+    width: 45rem;
 }
 
 @media (max-width: 750px) {
@@ -103,6 +103,6 @@ form.mail-subscribe {
 }
 
 .mailing-list {
-    margin-top: 20%;
-    max-width: 50rem;
+    margin-top: 10%;
+    max-width: 44rem;
 }
