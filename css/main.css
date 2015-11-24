@@ -47,6 +47,10 @@ input.email {
         background-color: rgba(0,0,0,0.6);
         padding: 2rem;
     }
+
+    i.scroll-cue {
+        display: none;
+    }
 }
 
 footer {
@@ -84,6 +88,16 @@ footer {
 .masthead a:hover {
     color: #ffffff;
     font-weight: bold;
+}
+
+.scroll-cue {
+    display: inline-block;
+    padding: 1rem;
+    float: right;
+    margin-top: -3rem;
+    margin-right: 2rem;
+    font-size: 4rem;
+    color: rgba(0,0,0,0.4);
 }
 
 .page {
@@ -160,7 +174,63 @@ footer {
     max-width: 45rem;
 }
 
+.details {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.detail {
+    display: inline-block;
+    border: 1px solid red;
+    min-width: 24rem;
+    width: 30%;
+    margin: 2rem;
+}
+
 .copyright {
     padding: 0 0 1rem 2.5rem;
     color: rgba(0,0,0,0.3);
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.swing {
+    animation: swing 2s;
+    transform-origin: top center;
+}
+
+@keyframes hover {
+    from {
+        animation-timing-function: ease-in-out;
+        transform: translateY(-1rem);
+    }
+    to {
+        animation-timing-function: ease-in-out;
+        transform: translateY(1rem);
+    }
+}
+
+.hover {
+  animation: hover 1s infinite alternate;
+  transform-origin: center bottom;
 }
