@@ -6,7 +6,6 @@ html {
 body {
     height: 100%;
     font-family: "EstrangeloEdessaRegular", Arial, sans-serif;
-    color: rgba(255,255,255,0.9);
     font-size: 2em;
     line-height: 1.4;
 }
@@ -55,18 +54,71 @@ footer {
     width: 100%;
     background-color: #ffffff;
     color: rgba(0,0,0,0.8);
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-.landing-main {
-    background-image: url(/images/bg.jpg);
-    background-position: 50% 50%;
+.masthead {
+    background: url(/images/bg.jpg) no-repeat 50% 50%;
     background-size: cover;
     width: 100%;
     height: 100%;
+    color: rgba(255,255,255,0.9);
 }
 
-.landing-info {
+.masthead a.logo {
+    display: inline-block;
+    background-image: url(/images/svg/giving-jar-icon-7.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 1.4em;
+    padding-left: 4rem;
+    color: #ffffff;
+}
+
+.masthead a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    font-weight: bold;
+}
+
+.masthead a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.page {
+    position: absolute;
+    top: 95%;
     width: 100%;
+    background-color: #ffffff;
+}
+
+.page a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    font-weight: bold;
+}
+
+.page a:hover {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: bold;
+}
+
+.page a.facebook:hover {
+    color: #3b5998;
+}
+
+.page a.twitter:hover {
+    color: #4099ff;
+}
+
+.page nav {
+    height: 8rem;
+}
+
+.page .menu {
+    padding: 2rem 2.5rem;
 }
 
 .site-menu {
@@ -103,28 +155,11 @@ footer {
     height: 4rem;
 }
 
-.menu a.logo {
-    display: inline-block;
-    background-image: url(/images/svg/giving-jar-icon-7.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    font-size: 1.4em;
-    padding-left: 4rem;
-    color: #ffffff;
-}
-
-.menu a {
-    text-decoration: none;
-    color: rgba(255,255,255,0.5);
-    font-weight: bold;
-}
-
-.menu a:hover {
-    color: #ffffff;
-    font-weight: bold;
-}
-
 .mailing-form {
     margin-top: 10%;
     max-width: 45rem;
+}
+
+.copyright {
+    padding: 0 0 1rem 2.5rem;
 }
