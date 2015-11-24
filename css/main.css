@@ -1,5 +1,4 @@
 html {
-    background-color: #808080;
     height: 100%;
 }
 
@@ -105,6 +104,8 @@ footer {
     top: 95%;
     width: 100%;
     background-color: #ffffff;
+    color: rgba(0,0,0,0.8);
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .page a {
@@ -181,10 +182,39 @@ footer {
 
 .detail {
     display: inline-block;
-    border: 1px solid red;
+    vertical-align: top;
     min-width: 24rem;
-    width: 30%;
+    width: 25%;
     margin: 2rem;
+}
+
+.detail .title {
+    margin-bottom: 0;
+}
+
+.hr {
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.dot1 {
+    color: rgba(51,195,240,0.8);
+    margin: auto 0.5rem;
+}
+
+.dot2 {
+    color: rgba(51,195,240,0.6);
+    margin: auto 0.5rem;
+}
+
+.dot3 {
+    color: rgba(51,195,240,0.4);
+    margin: auto 0.5rem;
+}
+
+.dot4 {
+    color: rgba(51,195,240,0.2);
+    margin: auto 0.5rem;
 }
 
 .copyright {
