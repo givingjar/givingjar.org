@@ -183,38 +183,43 @@ footer {
 .detail {
     display: inline-block;
     vertical-align: top;
-    min-width: 24rem;
     width: 25%;
     margin: 2rem;
 }
 
 .detail .title {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
-.hr {
+.vr {
+    display: inline-block;
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 0 1rem;
+    margin-top: 5rem;
 }
 
-.dot1 {
+.vr .dot1 {
+    display: block;
     color: rgba(51,195,240,0.8);
-    margin: auto 0.5rem;
+    margin: 0.5rem auto;
 }
 
-.dot2 {
+.vr .dot2 {
+    display: block;
     color: rgba(51,195,240,0.6);
-    margin: auto 0.5rem;
+    margin: 0.5rem auto;
 }
 
-.dot3 {
+.vr .dot3 {
+    display: block;
     color: rgba(51,195,240,0.4);
-    margin: auto 0.5rem;
+    margin: 0.5rem auto;
 }
 
-.dot4 {
+.vr .dot4 {
+    display: block;
     color: rgba(51,195,240,0.2);
-    margin: auto 0.5rem;
+    margin: 0.5rem auto;
 }
 
 .copyright {
