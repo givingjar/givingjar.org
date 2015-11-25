@@ -187,6 +187,14 @@ footer {
     margin: 2rem;
 }
 
+.detail:first-child {
+    margin-left: 0;
+}
+
+.detail:last-child {
+    margin-right: 0;
+}
+
 .detail .title {
     margin-bottom: 1rem;
 }
