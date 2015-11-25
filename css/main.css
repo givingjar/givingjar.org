@@ -183,6 +183,7 @@ footer {
 .detail {
     display: inline-block;
     vertical-align: top;
+    min-width: 24rem;
     width: 25%;
     margin: 2rem;
 }
@@ -204,6 +205,12 @@ footer {
     font-size: 1rem;
     padding: 0 1rem;
     margin-top: 5rem;
+}
+
+@media (max-width: 1000px) {
+    .vr {
+        display: none;
+    }
 }
 
 .vr .dot1 {
