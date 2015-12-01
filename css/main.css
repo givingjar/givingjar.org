@@ -49,6 +49,74 @@ input.email {
     max-width: 100%;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ #expand-menu {
+    display: block;
+}
+
+input[type="checkbox"]:checked ~ label[for="show-drop-menu"] {
+    color: #ffffff;
+}
+
+label[for="show-drop-menu"] {
+    margin-right: 2rem;
+    color: rgba(255,255,255,0.6);
+}
+
+label[for="show-drop-menu"]:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#expand-menu {
+    display: none;
+    list-style-type: none;
+    margin: -1rem 0 0 0;
+    padding: 0.3rem 1rem;
+    position: absolute;
+    right: 4.5rem;
+    text-align: right;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1px rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+#expand-menu li {
+	display: block;
+	float: right;
+	margin: 0;
+    padding: 0.2rem;
+    width: 100%;
+    line-height: 3rem;
+    height: 3rem;
+}
+
+#expand-menu li:hover {
+    text-decoration: underline;
+}
+
+#expand-menu a {
+    color: rgba(0,0,0,0.8);
+}
+
+#expand-menu a.facebook {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    color: #3b5998;
+}
+
+#expand-menu a.twitter {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    color: #4099ff;
+}
+
 @media (max-width: 750px) {
     input.email {
         width: 100%;
@@ -72,6 +140,14 @@ input.email {
 
     div.page {
         position: static;
+    }
+
+    .menu li.make-room {
+        display: none;
+    }
+
+    ol.menu li.drop-menu {
+        display: block;
     }
 }
 
@@ -191,6 +267,10 @@ footer {
     vertical-align: middle;
     line-height: 4rem;
     height: 4rem;
+}
+
+.menu li.drop-menu {
+    display: none;
 }
 
 .mailing-form {
