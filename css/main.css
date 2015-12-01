@@ -54,14 +54,24 @@ input.email {
         width: 100%;
     }
 
-    .mailing-form {
+    div.mailing-form {
         border-radius: 0.5rem;
         background-color: rgba(0,0,0,0.6);
         padding: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 0;
     }
 
     i.scroll-cue {
         display: none;
+    }
+
+    div.masthead {
+        height: auto;
+    }
+
+    div.page {
+        position: static;
     }
 }
 
@@ -223,6 +233,14 @@ footer {
 @media (max-width: 1000px) {
     .vr {
         display: none;
+    }
+
+    div.detail:first-child {
+        margin-left: 2rem;
+    }
+
+    div.detail:last-child {
+        margin-right: 2rem;
     }
 }
 
