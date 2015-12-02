@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Giving Jar</title>
-    <meta name="description" content="">
-    <meta name="author" content="Technical Rex, Inc.">
+    <meta name="description" content="Giving Jar is a platform that makes it convenient to donate to the charity of your choice online.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css" type="text/css">
@@ -20,12 +19,13 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Giving Jar" />
     <meta property="og:url" content="http://givingjar.surge.sh" />
-    <meta property="og:description" content="Giving Jar is a platform to make it convenient to donate to the charity of your choice online." />
+    <meta property="og:description" content="Giving Jar is a platform that makes it convenient to donate to the charity of your choice online." />
     <meta property="article:published_time" content="2015-11-16T00:00:00-00:00" />
     <meta property="article:modified_time" content="2015-11-16T00:00:00-00:00" />
     <meta property="og:site_name" content="Giving Jar" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="http://givingjar.surge.sh/images/giving-jar-icon-196.png" />
+    <meta property="fb:app_id" content="1711460762418877" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@givingjar" />
@@ -166,6 +166,23 @@
         });
 
         document.getElementById('mce-EMAIL').focus();
+
+        // Facebook app integration
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1711460762418877',
+                xfbml: true,
+                version: 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 </html>
