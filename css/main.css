@@ -160,11 +160,31 @@ footer {
 }
 
 .masthead {
-    background: url(/images/bg.jpg) no-repeat 50% 50%;
+    background: url(/images/bg-2048x1085.jpg) no-repeat 50% 50%;
     background-size: cover;
     width: 100%;
     height: 100%;
     color: rgba(255,255,255,0.9);
+}
+
+@media (max-width: 1000px) {
+    div.masthead {
+        background: url(/images/bg-1024x543.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        color: rgba(255,255,255,0.9);
+    }
+}
+
+@media (min-width: 2000px) {
+    div.masthead {
+        background: url(/images/bg-3525x1868.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        color: rgba(255,255,255,0.9);
+    }
 }
 
 .masthead a.logo {
