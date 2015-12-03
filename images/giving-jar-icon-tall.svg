@@ -17,7 +17,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="giving-jar-icon-7.svg">
+   sodipodi:docname="giving-jar-icon.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -99,7 +99,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284274"
-     inkscape:cx="39.238084"
+     inkscape:cx="-12.027153"
      inkscape:cy="65.679826"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -132,7 +132,8 @@
      id="layer1"
      transform="translate(-263.27492,-210.55108)">
     <g
-       id="g4170">
+       id="g4170"
+       transform="translate(0,0.99999403)">
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
