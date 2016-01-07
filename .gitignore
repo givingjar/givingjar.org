@@ -1,2 +1,10 @@
-_site/
+# project
+node_modules
+_site
+.sass-cache
 .jekyll-metadata
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
