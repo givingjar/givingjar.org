@@ -118,6 +118,10 @@ label[for="show-drop-menu"]:hover {
 }
 
 @media (max-width: 750px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
   input.email {
     width: 100%;
   }
@@ -295,6 +299,19 @@ footer {
 .mailing-form {
   margin-top: 10%;
   max-width: 45rem;
+}
+
+.mailing-form a {
+  text-decoration: none;
+  color: rgba(255,255,255,1);
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.mailing-form a:hover {
+  color: rgba(255,255,255,1);
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 .details {
