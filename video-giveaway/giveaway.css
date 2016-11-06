@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "EstrangeloEdessaRegular", Arial, sans-serif;
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+input.vote-text {
+  color: rgba(0,0,0,0.8);
+  width: 45rem;
+  max-width: 100%;
+}
+
+input[disabled] {
+  color: rgba(0,0,0,0.5);
+}
+
+.section-heading {
+  text-align: center;
+}
+
+.sponsor {
+  text-align: center;
+}
+
+.sponsor img {
+  max-width: 15rem;
+}
+
+.footer {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.footer .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.footer .copyright {
+  text-align: left;
+}
+
+.footer .backtop {
+  display: none;
+}
+
+@media (min-width: 550px) {
+  .footer .backtop {
+    display: block;
+    text-align: right;
+  }
+}
