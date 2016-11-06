@@ -274,6 +274,7 @@ footer {
 .social-menu {
   position: absolute;
   right: 0;
+  white-space: nowrap;
 }
 
 .social-menu li {
@@ -407,4 +408,8 @@ footer {
 .hover {
   animation: hover 1s infinite alternate;
   transform-origin: center bottom;
+}
+
+.flashy {
+  color: #fff;
 }

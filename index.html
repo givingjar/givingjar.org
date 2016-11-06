@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/skeleton.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css">
 
   <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
   <link rel="apple-touch-icon" type="image/png" href="images/giving-jar-icon-180.png">
@@ -56,6 +57,7 @@
         <li class="make-room"><a href="//blog.givingjar.org">Blog</a></li>
         <li class="make-room"><a target="_blank" href="mailto:hello@givingjar.org">Contact</a></li>
         <li class="make-room"><a target="_blank" href="http://bit.ly/GivingJarShopper">Download</a></li>
+        <li class="make-room"><a target="_blank" href="/"><div id="video-giveaway">Video Giveaway</div></a></li>
       </ol>
       <ol class="menu social-menu">
         <li class="make-room"><a target="_blank" class="facebook" href="https://www.facebook.com/givingjarorg"><i class="fa fa-facebook"></i></a></li>
@@ -68,6 +70,7 @@
             <li><a href="//blog.givingjar.org">Blog</a></li>
             <li><a target="_blank" href="mailto:hello@givingjar.org">Contact</a></li>
             <li><a target="_blank" href="http://bit.ly/GivingJarShopper">Download</a></li>
+            <li><a target="_blank" href="/">Video Giveaway</a></li>
             <li>
               <a target="_blank" class="facebook" href="https://www.facebook.com/givingjarorg"><i class="fa fa-facebook"></i></a>
               <a target="_blank" class="twitter" href="https://www.twitter.com/givingjar"><i class="fa fa-twitter"></i></a>
@@ -184,6 +187,17 @@
   });
 
   document.getElementById('mce-EMAIL').focus();
+
+  (function startVideGiveawayAnimation(secondsDelay) {
+    setTimeout(function() {
+      $('#video-giveaway').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $('#video-giveaway').removeClass('animated tada flashy');
+        startVideGiveawayAnimation(6);
+      });
+
+      $('#video-giveaway').addClass('animated tada flashy');
+    }, secondsDelay * 1000);
+  })(1.5);
   </script>
 </body>
 </html>
