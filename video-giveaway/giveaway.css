@@ -56,12 +56,14 @@ input[disabled] {
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.winners .video-right {
-  text-align: right;
+.winners .caption {
+  text-align: center;
+  margin: 1rem 0 0;
 }
 
-.winners .video-left {
-  text-align: left;
+.winners .subcaption {
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 /* Brought to You By */
