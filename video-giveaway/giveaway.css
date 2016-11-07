@@ -109,10 +109,6 @@ input[disabled] {
 
 /* Nominate */
 
-.nominate {
-  padding-bottom: 2.5rem;
-}
-
 .nominate .heading {
   text-align: center;
   font-weight: bold;
@@ -127,12 +123,22 @@ input[disabled] {
   margin-bottom: 2rem;
 }
 
+.nominate form {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
 #voteResponder p {
   color: #1eaedb;
 }
 
 .fa-heart {
   color: crimson;
+}
+
+.nominate .social-links {
+  text-align: center;
 }
 
 /* Previous Winners */
