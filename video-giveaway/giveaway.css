@@ -34,6 +34,7 @@ input[disabled] {
 
 .section-heading {
   text-align: center;
+  margin: -2rem 0 3rem;
 }
 
 .content {
@@ -61,6 +62,25 @@ input[disabled] {
   margin: 1rem 0 0;
 }
 
+.winners .caption h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 0;
+}
+
+@media (min-width: 550px) {
+  .winners .caption:after, .winners .caption:before {
+    height: 100%;
+    content: '';
+    font-size:0;
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  .winners .caption h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 1rem;
+  }
+}
+
 .winners .subcaption {
   font-style: italic;
   margin-bottom: 0;
@@ -70,6 +90,16 @@ input[disabled] {
 
 .sponsor {
   text-align: center;
+}
+
+.sponsor + .sponsor {
+  margin-top: 4rem;
+}
+
+@media (min-width: 550px) {
+  .sponsor + .sponsor {
+    margin-top: 0;
+  }
 }
 
 .sponsor img {
