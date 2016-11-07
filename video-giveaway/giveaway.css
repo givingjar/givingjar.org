@@ -26,9 +26,45 @@ input[disabled] {
   color: rgba(0,0,0,0.5);
 }
 
+/* All Sections */
+
+.section {
+  padding: 6rem 0;
+}
+
 .section-heading {
   text-align: center;
 }
+
+.content {
+  padding: 0;
+}
+
+.content + .content {
+  padding-top: 6rem;
+}
+
+/* Nominate */
+
+
+
+/* Previous Winners */
+
+.winners {
+  background-color: #ebfaff;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.winners .video-right {
+  text-align: right;
+}
+
+.winners .video-left {
+  text-align: left;
+}
+
+/* Brought to You By */
 
 .sponsor {
   text-align: center;
@@ -37,6 +73,8 @@ input[disabled] {
 .sponsor img {
   max-width: 15rem;
 }
+
+/* Footer */
 
 .footer {
   border-top: 1px solid rgba(0,0,0,0.1);
