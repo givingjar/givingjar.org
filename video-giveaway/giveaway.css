@@ -45,6 +45,68 @@ input[disabled] {
   padding-top: 6rem;
 }
 
+/* Navigation Menu */
+
+.nav {
+  background-color: #ebfaff;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  height: 4rem;
+  font-size: 2.1rem;
+}
+
+.nav a {
+  color: #404040;
+}
+.nav a:hover {
+  color: #1EAEDB;
+  text-decoration: none;
+}
+
+.nav .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.nav .title {
+  display: none;
+}
+
+@media (min-width: 550px) {
+  .nav .title {
+    display: inline;
+  }
+}
+
+#gj-logo {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  height: 7rem;
+  padding-left: 8rem;
+  padding-top: 0.9rem;
+
+  background-image: url(/images/giving-jar-hires-circle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+#ud-logo {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  height: 7rem;
+  padding-right: 8rem;
+  padding-top: 0.9rem;
+
+  background-image: url(/images/other/udm-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
 /* Nominate */
 
 .nominate {
@@ -56,15 +118,7 @@ input[disabled] {
   font-weight: bold;
   font-size: 5rem;
   letter-spacing: 0.02rem;
-}
-
-@media (min-width: 550px) {
-  .nominate .title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 6rem;
-    letter-spacing: 0.02rem;
-  }
+  margin-bottom: 5rem;
 }
 
 #voteResponder p {
