@@ -19,7 +19,7 @@ label {
 }
 
 #mce-email-label a {
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -36,7 +36,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #D1D1D1;
+  border: 1px solid #d1d1d1;
 }
 
 input[type="submit"] {
@@ -44,7 +44,7 @@ input[type="submit"] {
 }
 
 input.email {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
   width: 45rem;
   max-width: 100%;
 }
@@ -58,16 +58,16 @@ input[type="checkbox"]:checked ~ #expand-menu {
 }
 
 input[type="checkbox"]:checked ~ label[for="show-drop-menu"] {
-  color: #ffffff;
+  color: #fff;
 }
 
 label[for="show-drop-menu"] {
   margin-right: 2rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 label[for="show-drop-menu"]:hover {
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -79,9 +79,9 @@ label[for="show-drop-menu"]:hover {
   position: absolute;
   right: 4.5rem;
   text-align: right;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0 1px rgba(0,0,0,0.6);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
   z-index: 1000;
 }
 
@@ -100,7 +100,7 @@ label[for="show-drop-menu"]:hover {
 }
 
 #expand-menu a {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 #expand-menu a.facebook {
@@ -128,7 +128,7 @@ label[for="show-drop-menu"]:hover {
 
   div.mailing-form {
     border-radius: 0.5rem;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
     margin-bottom: 2rem;
     margin-top: 0;
@@ -158,9 +158,9 @@ label[for="show-drop-menu"]:hover {
 footer {
   position: relative;
   width: 100%;
-  background-color: #ffffff;
-  color: rgba(0,0,0,0.8);
-  border-top: 1px solid rgba(0,0,0,0.1);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .masthead {
@@ -168,7 +168,7 @@ footer {
   background-size: cover;
   width: 100%;
   height: 100%;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 1000px) {
@@ -176,7 +176,7 @@ footer {
     background: url(/images/bg-1024x543.jpg) no-repeat 50% 50%;
     background-size: cover;
     width: 100%;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -186,7 +186,7 @@ footer {
     background-size: cover;
     width: 100%;
     height: 100%;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -197,17 +197,17 @@ footer {
   background-repeat: no-repeat;
   font-size: 1.4em;
   padding-left: 4rem;
-  color: #ffffff;
+  color: #fff;
 }
 
 .masthead a {
   text-decoration: none;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
 }
 
 .masthead a:hover {
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -218,27 +218,27 @@ footer {
   margin-top: -3rem;
   margin-right: 2rem;
   font-size: 4rem;
-  color: rgba(0,0,0,0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .page {
   position: absolute;
   top: 95%;
   width: 100%;
-  background-color: #ffffff;
-  color: rgba(0,0,0,0.8);
-  border-top: 1px solid rgba(0,0,0,0.1);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .page a {
   text-decoration: none;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
 
 .page a:hover {
   text-decoration: underline;
-  color: #000000;
+  color: #000;
   font-weight: bold;
 }
 
@@ -304,13 +304,12 @@ footer {
 
 .mailing-form a {
   text-decoration: none;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   font-weight: normal;
-  text-decoration: underline;
 }
 
 .mailing-form a:hover {
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   font-weight: normal;
   text-decoration: underline;
 }
@@ -367,31 +366,31 @@ footer {
 
 .vr .dot1 {
   display: block;
-  color: rgba(51,195,240,0.8);
+  color: rgba(51, 195, 240, 0.8);
   margin: 0.5rem auto;
 }
 
 .vr .dot2 {
   display: block;
-  color: rgba(51,195,240,0.6);
+  color: rgba(51, 195, 240, 0.6);
   margin: 0.5rem auto;
 }
 
 .vr .dot3 {
   display: block;
-  color: rgba(51,195,240,0.4);
+  color: rgba(51, 195, 240, 0.4);
   margin: 0.5rem auto;
 }
 
 .vr .dot4 {
   display: block;
-  color: rgba(51,195,240,0.2);
+  color: rgba(51, 195, 240, 0.2);
   margin: 0.5rem auto;
 }
 
 .copyright {
   padding: 0 0 1rem 2.5rem;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 @keyframes hover {
@@ -399,6 +398,7 @@ footer {
     animation-timing-function: ease-in-out;
     transform: translateY(-1rem);
   }
+
   to {
     animation-timing-function: ease-in-out;
     transform: translateY(1rem);
