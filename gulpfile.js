@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    cleanCSS = require('gulp-clean-css'),
     cssBase64 = require('gulp-css-base64'),
     path = require('path'),
     notify = require('gulp-notify'),
@@ -28,6 +29,7 @@ gulp.task('sass', function () {
     })))
     .pipe(cssBase64())
     .pipe(autoprefixer())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./src/css/'))
     .pipe(gulp.dest('./dist/css/'))
