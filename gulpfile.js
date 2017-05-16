@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var standard = require('gulp-standard')
+var htmlhint = require('gulp-htmlhint')
 var sass = require('gulp-sass')
 var sourcemaps = require('gulp-sourcemaps')
 var cleanCSS = require('gulp-clean-css')
@@ -14,6 +15,13 @@ var cache = require('gulp-cache')
 var uglify = require('gulp-uglify')
 var autoprefixer = require('gulp-autoprefixer')
 var runSequence = require('run-sequence')
+
+// Task to lint HTML
+gulp.task('htmlhint', function () {
+  return gulp.src('./src/**/*.html')
+    .pipe(htmlhint())
+    .pipe(htmlhint.failReporter())
+})
 
 // Task to lint JavaScript
 gulp.task('standard', function () {
@@ -89,7 +97,7 @@ gulp.task('inlinesource', function () {
 
 // Gulp lint task
 gulp.task('lint', function () {
-  runSequence('standard')
+  runSequence('standard', 'htmlhint')
 })
 
 // Gulp Watch Task
