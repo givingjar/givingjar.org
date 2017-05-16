@@ -1,6 +1,7 @@
 // Base Gulp File
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
+    standard = require('gulp-standard'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCSS = require('gulp-clean-css'),
@@ -15,6 +16,19 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
     runSequence = require('run-sequence');
+
+// Task to lint JavaScript
+gulp.task('standard', function () {
+  return gulp.src(['./src/js/*.js'])
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: true,
+      breakOnWarning: true,
+      showRuleNames: true,
+      showFilePath: true,
+      quiet: true
+    }))
+})
 
 // Task to compile SCSS
 gulp.task('sass', function () {
@@ -91,5 +105,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass', 'imagemin', 'jsmin', 'inlinesource');
+  runSequence('clean', 'standard', 'sass', 'imagemin', 'jsmin', 'inlinesource');
 });

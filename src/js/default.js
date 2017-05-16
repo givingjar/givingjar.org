@@ -1,6 +1,5 @@
-// Default JavaScript Functions and Initiations
-$(document).ready(function() {
+/* eslint-env browser, jquery */
 
+$(document).ready(function () {
   // Functions go here...
-  
-}); // end document ready
+})
