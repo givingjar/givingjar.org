@@ -13,12 +13,21 @@
   color: #363636;
   display: inline-block;
   transition: all 0.3s;
-  &:hover, &:active { text-decoration: none; }
-  &:hover { background: #f9f9f9; }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: #f9f9f9;
+  }
 }
+
 .button-primary {
   // Add your styles here
 }
+
 .button-secondary {
   // Add your styles here
 }
@@ -30,6 +39,12 @@
   border: 0;
   background: transparent;
   padding: 0;
-  &:hover { text-decoration: none; }
-  &:active { outline: 0; }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    outline: 0;
+  }
 }

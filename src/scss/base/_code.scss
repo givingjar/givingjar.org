@@ -1,9 +1,13 @@
 // ==========================================================================
 // Base – Code
 // ==========================================================================
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   @include font-size($base-code-font-size);
   @include line-height($base-code-line-height);
+
   word-wrap: break-word;
   font-family: $base-code-font-family;
   color: $base-code-color;
@@ -12,6 +16,7 @@ code, kbd, pre, samp {
   padding: 0;
   white-space: pre-wrap;
 }
+
 pre {
   padding: 10px;
   overflow: auto;

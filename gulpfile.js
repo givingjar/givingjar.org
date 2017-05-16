@@ -1,6 +1,7 @@
 var gulp = require('gulp')
 var standard = require('gulp-standard')
 var htmlhint = require('gulp-htmlhint')
+var stylelint = require('gulp-stylelint')
 var sass = require('gulp-sass')
 var sourcemaps = require('gulp-sourcemaps')
 var cleanCSS = require('gulp-clean-css')
@@ -21,6 +22,17 @@ gulp.task('htmlhint', function () {
   return gulp.src('./src/**/*.html')
     .pipe(htmlhint())
     .pipe(htmlhint.failReporter())
+})
+
+// Task to lint SCSS
+gulp.task('stylelint', function () {
+  return gulp.src('./src/scss/**/*.scss')
+  .pipe(stylelint({
+    failAfterError: true,
+    reporters: [
+      { formatter: 'string', console: true }
+    ]
+  }))
 })
 
 // Task to lint JavaScript
@@ -97,7 +109,7 @@ gulp.task('inlinesource', function () {
 
 // Gulp lint task
 gulp.task('lint', function () {
-  runSequence('standard', 'htmlhint')
+  runSequence('htmlhint', 'stylelint', 'standard')
 })
 
 // Gulp Watch Task

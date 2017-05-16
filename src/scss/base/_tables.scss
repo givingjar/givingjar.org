@@ -9,13 +9,16 @@ caption {
   padding: 10px;
   border-bottom: 1px solid #d7d7d7;
 }
+
 table {
   @include font-size($base-font-size - 2);
+
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   margin: 0;
   text-align: left;
+
   thead,
   tbody,
   tfoot {

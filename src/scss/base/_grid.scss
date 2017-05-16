@@ -3,8 +3,25 @@
 // ==========================================================================
 
 // Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
-.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
-.row:before, .row:after { content: ""; display: table; } .row:after { clear: both; }
+.clear::before,
+.clear::after {
+  content: " ";
+  display: table;
+}
+
+.clear::after {
+  clear: both;
+}
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
 
 // Rows
 .row {
@@ -18,9 +35,27 @@
     position: relative;
     margin-left: -$grid-gutter-m;
     margin-right: -$grid-gutter-m;
-    &:before, &:after { content: ""; display: table; } &:after { clear: both; }
+
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
   }
-  .clear-m:before, .clear-m:after { content: ""; display: table; } .clear-m:after { clear: both; }
+
+  .clear-m::before,
+  .clear-m::after {
+    content: "";
+    display: table;
+  }
+
+  .clear-m::after {
+    clear: both;
+  }
 }
 // Large Device Row
 @include breakpoint(l) {
@@ -28,23 +63,61 @@
     position: relative;
     margin-left: -$grid-gutter-l;
     margin-right: -$grid-gutter-l;
-    &:before, &:after { content: ""; display: table; } &:after { clear: both; }
+
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
   }
-  .clear-l:before, .clear-l:after { content: ""; display: table; } .clear-l:after { clear: both; }
+
+  .clear-l::before,
+  .clear-l::after {
+    content: "";
+    display: table;
+  }
+
+  .clear-l::after {
+    clear: both;
+  }
 }
+
 // Extra Large Device Row
 @include breakpoint(xl) {
   .row-xl {
     position: relative;
     margin-left: -$grid-gutter-xl;
     margin-right: -$grid-gutter-xl;
-    &:before, &:after { content: ""; display: table; } &:after { clear: both; }
+
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
   }
-  .clear-xl:before, .clear-xl:after { content: ""; display: table; } .clear-xl:after { clear: both; }
+
+  .clear-xl::before,
+  .clear-xl::after {
+    content: "";
+    display: table;
+  }
+
+  .clear-xl::after {
+    clear: both;
+  }
 }
 
 // Container
-.container, .container-full {
+.container,
+.container-full {
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   margin-left: auto;
@@ -54,7 +127,9 @@
 // Medium Device Container
 @include breakpoint(m) {
   .container { width: $container-m; }
-  .container-m, .container-full-m {
+
+  .container-m,
+  .container-full-m {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
@@ -63,10 +138,13 @@
   .container-m { width: $container-m; }
   .container-full-m { width: auto; }
 }
+
 // Large Device Container
 @include breakpoint(l) {
   .container { width: $container-l; }
-  .container-l, .container-full-l {
+
+  .container-l,
+  .container-full-l {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
@@ -78,7 +156,9 @@
 // Extra Large Device Container
 @include breakpoint(xl) {
   .container { width: $container-xl; }
-  .container-xl, .container-full-xl {
+
+  .container-xl,
+  .container-full-xl {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
@@ -118,6 +198,7 @@
 
 // Mobile-first Grid
 $columns: 12;
+
 @for $i from 1 through $columns {
   .col-#{$i} {
     width: ($i / $columns) * 100%;
@@ -166,7 +247,6 @@ $columns: 12;
 .pull-3-5 { $grid-alignment: -(7.2 / 12) * 100%; }
 .pull-4-5 { $grid-alignment: -(9.6 / 12) * 100%; }
 
-
 // Medium Device Grid
 @include breakpoint(m) {
 
@@ -200,6 +280,7 @@ $columns: 12;
 
   // Medium Device Grid
   $columns: 12;
+
   @for $i from 1 through $columns {
     .col-#{$i}-m {
       width: ($i / $columns) * 100%;
@@ -247,7 +328,6 @@ $columns: 12;
   .pull-2-5-m { $grid-alignment: -(4.8 / 12) * 100%; }
   .pull-3-5-m { $grid-alignment: -(7.2 / 12) * 100%; }
   .pull-4-5-m { $grid-alignment: -(9.6 / 12) * 100%; }
-
 }
 
 // Large Device Grid
@@ -283,6 +363,7 @@ $columns: 12;
 
   // Large Device Grid
   $columns: 12;
+
   @for $i from 1 through $columns {
     .col-#{$i}-l {
       width: ($i / $columns) * 100%;
@@ -330,7 +411,6 @@ $columns: 12;
   .pull-2-5-l { $grid-alignment: -(4.8 / 12) * 100%; }
   .pull-3-5-l { $grid-alignment: -(7.2 / 12) * 100%; }
   .pull-4-5-l { $grid-alignment: -(9.6 / 12) * 100%; }
-
 }
 
 // Extra Large Device Grid
@@ -366,6 +446,7 @@ $columns: 12;
 
   // Extra Large Device Grid
   $columns: 12;
+
   @for $i from 1 through $columns {
     .col-#{$i}-xl {
       width: ($i / $columns) * 100%;
@@ -413,5 +494,4 @@ $columns: 12;
   .pull-2-5-xl { $grid-alignment: -(4.8 / 12) * 100%; }
   .pull-3-5-xl { $grid-alignment: -(7.2 / 12) * 100%; }
   .pull-4-5-xl { $grid-alignment: -(9.6 / 12) * 100%; }
-
 }

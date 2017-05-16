@@ -8,6 +8,7 @@
 .no-float { float: none; }
 .no-background { background: transparent; }
 .no-border { border: 0; }
+
 .no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -132,15 +133,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
   li {
     margin: 0;
     padding: 0;
   }
 }
+
 .list-inline {
   list-style: none;
   margin: 0;
   padding: 0;
+
   li {
     margin: 0;
     padding: 0;
@@ -157,6 +161,7 @@
 // Grouped Form Fields
 .form-group {
   overflow: hidden;
+
   label {
     display: inline-block;
     padding-top: 8px;
@@ -164,10 +169,11 @@
 }
 
 // Disable Element
-.disabled, [disabled] {
+.disabled,
+[disabled] {
   pointer-events: none;
   cursor: not-allowed;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 // Checkbox and Radio
@@ -175,11 +181,13 @@
 .radio {
   display: inline-block;
   position: relative;
+
   label {
     padding-left: 20px;
     padding-top: 0;
     display: inline-block;
   }
+
   input[type="checkbox"],
   input[type="radio"] {
     position: absolute;
@@ -192,7 +200,8 @@
 .select {
   position: relative;
   display: block;
-  &:before {
+
+  &::before {
     content: "";
     border: 6px solid transparent;
     border-top-color: #676767;
@@ -202,6 +211,7 @@
     pointer-events: none;
     position: absolute;
   }
+
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -213,10 +223,13 @@
     background: $base-input-background-color;
     display: block;
   }
+
   select::-ms-expand {
     display: none;
   }
+
   select:focus { border-color: $base-input-border-focus-color; }
+
   select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 $base-input-color;
@@ -226,6 +239,7 @@
 
 // Animations
 .animation { @include animation(1s); }
+
 .animation-infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -233,7 +247,7 @@
 
 // Tablet Helpers
 @include breakpoint(m) {
-  
+
   // General Resets
   .no-float-m { float: none; }
   .no-padding-m { padding: 0; }
@@ -266,7 +280,7 @@
   // Floats
   .left-m { float: left; }
   .right-m { float: right; }
-  
+
   // Alignment
   .center-m {
     float: none;
@@ -285,7 +299,11 @@
     width: auto;
     float: none;
   }
-  .no-push-m, .no-pull-m { left: 0; }
+
+  .no-push-m,
+  .no-pull-m {
+    left: 0;
+  }
 
   // Padding Helpers
   .pad-top-0-m { padding-top: 0; }
@@ -331,7 +349,7 @@
 
 // Desktop Helpers
 @include breakpoint(l) {
-  
+
   // General Resets
   .no-float-l { float: none; }
   .no-padding-l { padding: 0; }
@@ -383,7 +401,11 @@
     width: auto;
     float: none;
   }
-  .no-push-l, .no-pull-l { left: 0; }
+
+  .no-push-l,
+  .no-pull-l {
+    left: 0;
+  }
 
   // Padding Helpers
   .pad-top-0-l { padding-top: 0; }
@@ -481,7 +503,11 @@
     width: auto;
     float: none;
   }
-  .no-push-xl, .no-pull-xl { left: 0; }
+
+  .no-push-xl,
+  .no-pull-xl {
+    left: 0;
+  }
 
   // Padding Helpers
   .pad-top-0-xl { padding-top: 0; }
@@ -550,7 +576,11 @@
     width: auto;
     float: none;
   }
-  .no-push-print, .no-pull-print { left: 0; }
+
+  .no-push-print,
+  .no-pull-print {
+    left: 0;
+  }
 
   // Padding Helpers
   .pad-top-0-print { padding-top: 0; }

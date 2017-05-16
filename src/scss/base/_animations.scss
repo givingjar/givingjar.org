@@ -16,6 +16,7 @@
     opacity: 0;
     transform: translate3d(0, -30px, 0);
   }
+
   100% {
     opacity: 1;
     transform: none;
@@ -30,6 +31,7 @@
     opacity: 0;
     transform: translate3d(0, -100%, 0);
   }
+
   100% {
     opacity: 1;
     transform: none;
@@ -44,6 +46,7 @@
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
   }
+
   100% {
     opacity: 1;
     transform: none;
@@ -58,6 +61,7 @@
     opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
+
   100% {
     opacity: 1;
     transform: none;
@@ -87,6 +91,7 @@
     opacity: 0;
     transform: translate3d(100%, 0, 0);
   }
+
   100% {
     opacity: 1;
     transform: none;
@@ -101,6 +106,7 @@
     opacity: 0;
     transform: translate3d(0, 30px, 0);
   }
+
   100% {
     opacity: 1;
     transform: none;

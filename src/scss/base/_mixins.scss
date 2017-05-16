@@ -21,7 +21,8 @@
 @mixin font-size ($size) {
   $remValue: $size / 16;
   $pxValue: ($size);
-  font-size: $pxValue + px; 
+
+  font-size: $pxValue + px;
   font-size: $remValue + rem;
 }
 
@@ -30,7 +31,8 @@
 @mixin line-height ($size) {
   $remValue: $size / 16;
   $pxValue: ($size);
-  line-height: $pxValue + px; 
+
+  line-height: $pxValue + px;
   line-height: $remValue + rem;
 }
 
@@ -39,6 +41,7 @@
 @mixin background-alpha($color, $alpha) {
   $opacity: $alpha / 100%;
   $rgba: rgba($color, $opacity);
+
   background: $color;
   background: rgba($color, $opacity);
 }
@@ -54,7 +57,8 @@
 // Example Usage @mixin arrow(4px, #000, up);
 @mixin arrow ($size: 5px, $color: #333, $direction: right) {
   position: relative;
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
     border: $size solid transparent;
