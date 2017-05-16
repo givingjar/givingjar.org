@@ -1929,6 +1929,10 @@ get-stdin@^5.0.0, get-stdin@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
 
+getbase@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/getbase/-/getbase-3.3.0.tgz#89ef2190b0b272f9eec010b0b98da9e6dea24635"
+
 getpass@^0.1.1:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
