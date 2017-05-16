@@ -87,6 +87,11 @@ gulp.task('inlinesource', function () {
     .pipe(gulp.dest('./dist/'))
 })
 
+// Gulp lint task
+gulp.task('lint', function () {
+  runSequence('standard')
+})
+
 // Gulp Watch Task
 gulp.task('watch', ['browserSync'], function () {
   gulp.watch('./src/scss/**/*', ['sass'])
@@ -103,5 +108,5 @@ gulp.task('default', ['watch'])
 
 // Gulp Build Task
 gulp.task('build', function () {
-  runSequence('clean', 'standard', 'sass', 'imagemin', 'jsmin', 'inlinesource')
+  runSequence('clean', 'lint', 'sass', 'imagemin', 'jsmin', 'inlinesource')
 })
