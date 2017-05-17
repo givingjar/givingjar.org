@@ -1,0 +1,16 @@
+{
+  "base": {
+    "background": {
+      "color": "#fff"
+    },
+    "color": "#404040",
+    "font": {
+      "family": "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    }
+  },
+  "heading": {
+    "font": {
+      "family": "'EstrangeloEdessaRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    }
+  }
+}
