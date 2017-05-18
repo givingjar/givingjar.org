@@ -22,7 +22,6 @@
 
 <script>
 export default {
-  name: 'Hello',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -42,4 +41,8 @@ ul
 li
   display: inline-block
   margin: 0 10px
+
+.hello
+  text-align: center
+  margin-top: 60px
 </style>

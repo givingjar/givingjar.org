@@ -1,15 +1,8 @@
 <template>
-  <div id="app">
-    <img src="static/img/giving-jar-icon-square.svg">
-    <router-view></router-view>
+  <div :key="$route.fullPath">
+    <router-view/>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'app'
-}
-</script>
 
 <style lang="stylus">
 @import './design'
@@ -30,8 +23,4 @@ a
   &:hover
     color: darken($design.brand.colors.action, 15%)
     text-decoration: underline
-
-#app
-  text-align: center
-  margin-top: 60px
 </style>
