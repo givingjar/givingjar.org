@@ -1,4 +1,11 @@
 {
+  "brand": {
+    "colors": {
+      "jar": "#00c5fe",
+      "calm": "#ebfaff",
+      "action": "#007fa2"
+    }
+  },
   "base": {
     "background": {
       "color": "#fff"
