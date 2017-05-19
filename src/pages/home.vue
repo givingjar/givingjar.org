@@ -1,19 +1,16 @@
 <template>
-  <Landing>
+  <Layout>
     <Hello/>
-  </Landing>
+  </Layout>
 </template>
 
 <script>
-import Landing from '@/layouts/landing'
+import Layout from '@/layouts/landing'
 import Hello from '@/components/hello'
 
 export default {
   components: {
-    Landing, Hello
+    Layout, Hello
   }
 }
 </script>
-
-<style lang="stylus">
-</style>

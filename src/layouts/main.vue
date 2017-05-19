@@ -1,13 +1,9 @@
 <template>
-  <div class="main">
+  <div>
     <SiteNav/>
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <slot></slot>
-        </div>
-      </div>
-    </div>
+    <main class="container">
+      <slot></slot>
+    </main>
   </div>
 </template>
 

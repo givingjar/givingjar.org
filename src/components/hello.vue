@@ -30,19 +30,24 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-h1, h2
-  font-weight: normal
+<style lang="scss" scoped>
+h1,
+h2 {
+  font-weight: normal;
+}
 
-ul
-  list-style-type: none
-  padding: 0
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-li
-  display: inline-block
-  margin: 0 10px
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
 
-.hello
-  text-align: center
-  margin-top: 60px
+.hello {
+  text-align: center;
+  margin-top: 60px;
+}
 </style>
