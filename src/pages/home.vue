@@ -1,6 +1,8 @@
 <template>
   <Layout>
     <Hello/>
+    <Hello/>
+    <Hello/>
   </Layout>
 </template>
 

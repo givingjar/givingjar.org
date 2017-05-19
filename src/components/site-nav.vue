@@ -4,7 +4,8 @@
       <div class="">
         <button
           type="button"
-          :class="{ 'menu-toggle': true, 'on': showMenu }"
+          class="menu-toggle"
+          :class="{ 'on': showMenu }"
           aria-label="Toggle navigation"
           @click="toggleMenu"
         >
@@ -21,7 +22,11 @@
         </ul>
       </div>
 
-      <div v-if="showLogo" class="logo-container">
+      <div
+        v-if="!showMenu"
+        class="logo-container"
+        :class="{ 'hide': !showLogo }"
+      >
         <div class="logo">
           <a href="https://blog.givingjar.org">
             <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
@@ -34,6 +39,9 @@
 
 <script>
 export default {
+  mounted () {
+    window.addEventListener('scroll', this.resetShowLogo)
+  },
   data () {
     return {
       showLogo: true,
@@ -42,9 +50,12 @@ export default {
     }
   },
   methods: {
+    resetShowLogo () {
+      this.showLogo = !this.showMenu && window.pageYOffset <= 50
+    },
     toggleMenu () {
-      this.showLogo = this.showMenu
       this.showMenu = !this.showMenu
+      this.resetShowLogo()
     }
   }
 }
