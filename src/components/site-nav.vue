@@ -21,10 +21,12 @@
         </ul>
       </div>
 
-      <div class="logo">
-        <a href="https://blog.givingjar.org ">
-          <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
-        </a>
+      <div v-if="showLogo" class="logo-container">
+        <div class="logo">
+          <a href="https://blog.givingjar.org">
+            <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -34,11 +36,14 @@
 export default {
   data () {
     return {
-      showMenu: false
+      showLogo: true,
+      showMenu: false,
+      compactNav: true
     }
   },
   methods: {
     toggleMenu () {
+      this.showLogo = this.showMenu
       this.showMenu = !this.showMenu
     }
   }
@@ -98,5 +103,23 @@ button.menu-toggle {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+div.logo-container {
+  opacity: 1;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  left: 50%;
+  width: 50px;
+
+  &.hide {
+    opacity: 0;
+  }
+
+  div.logo {
+    width: 100%;
+    margin-left: -50%;
+    display: inline-block;
+  }
 }
 </style>
