@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-size: 1.5em;
+  font-size: 1.8rem;
   line-height: 1.6;
   font-weight: 400;
   font-family: $base-font-family;
@@ -37,25 +37,16 @@ a {
   }
 }
 
-.button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  border: 1px solid $control-border-color;
+  border-radius: $control-border-radius;
+  cursor: pointer;
   margin: 0;
-}
 
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #fff;
-  background-color: $brand-colors-action;
-  border-color: $brand-colors-action;
+  &:focus {
+    outline: 0;
+  }
 }

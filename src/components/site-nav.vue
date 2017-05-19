@@ -1,34 +1,52 @@
 <template>
   <nav>
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar" aria-label="Toggle navigation">
+    <div class="">
+      <div class="">
+        <button
+          type="button"
+          :class="{ 'menu-toggle': true, 'on': showMenu }"
+          aria-label="Toggle navigation"
+          @click="toggleMenu"
+        >
           <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
-        <router-link to="/" class="navbar-brand">Giving Jar</router-link>
+        <router-link to="/" class="brand">Giving Jar</router-link>
       </div>
 
-      <div class="collapse navbar-collapse" id="main-navbar">
-        <ul class="nav navbar-nav navbar-right">
+      <div v-if="showMenu">
+        <ul>
           <li><a href="https://givingjar.org">Newsletter</a></li>
           <li><a href="/tag/spotlight/">Spotlights</a></li>
           <li><a href="/about/">About</a></li>
         </ul>
       </div>
 
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a href="https://blog.givingjar.org ">
-            <img class="avatar-img" src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
-          </a>
-        </div>
+      <div class="logo">
+        <a href="https://blog.givingjar.org ">
+          <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
+        </a>
       </div>
     </div>
   </nav>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      showMenu: false
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.showMenu = !this.showMenu
+    }
+  }
+}
+</script>
+
 <style lang="scss">
-main {
+body {
   padding-top: 80px;
 }
 </style>
@@ -39,11 +57,46 @@ main {
 nav {
   background-color: $brand-colors-calm;
   border-bottom: 1px solid $control-border-color;
-  font-family: $base-font-family;
+  font-family: $heading-font-family;
   margin-bottom: 20px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+}
+
+a {
+  color: $base-color;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $brand-colors-action;
+  }
+}
+
+button.menu-toggle {
+  color: darken($control-border-color, 35%);
+  float: right;
+  padding: 9px 10px;
+  margin: 8px 15px 8px 0;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 4px;
+  width: 4rem;
+  height: 4rem;
+
+  &.on {
+    background-color: $control-border-color;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 </style>
