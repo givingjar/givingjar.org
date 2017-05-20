@@ -1,7 +1,26 @@
 <template>
   <nav :class="{ 'small-nav': shrinkNav }">
     <div class="action-row">
-      <div class="">
+      <div>
+        <div
+          class="menu-links"
+          :class="{ 'small-nav': shrinkNav, 'invisible': !showMenu }"
+        >
+          <ul>
+            <li><a href="//blog.givingjar.org">Our Blog</a></li>
+            <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
+            <li><a href="//blog.givingjar.org/about/">Mission</a></li>
+            <li>
+              <a class="social" href="https://www.facebook.com/givingjarorg">
+                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+              </a>
+              <a class="social" href="https://www.twitter.com/givingjar">
+                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <button
           type="button"
           class="menu-toggle"
@@ -12,26 +31,8 @@
         >
           <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
-        <router-link to="/" class="brand">Giving Jar</router-link>
-      </div>
 
-      <div
-        class="menu-links"
-        :class="{ 'small-nav': shrinkNav, 'invisible': !showMenu }"
-      >
-        <ul>
-          <li><a href="//blog.givingjar.org">Our Blog</a></li>
-          <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
-          <li><a href="//blog.givingjar.org/about/">Mission</a></li>
-          <li>
-            <a class="social" href="https://www.facebook.com/givingjarorg">
-              <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-            </a>
-            <a class="social" href="https://www.twitter.com/givingjar">
-              <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
+        <router-link to="/" class="brand">Giving Jar</router-link>
       </div>
 
       <transition name="logo-transition">
@@ -59,11 +60,6 @@ export default {
       showLogo: true,
       showMenu: false,
       compactNav: true
-    }
-  },
-  computed: {
-    showMenuLinks () {
-      return this.showMenu
     }
   },
   methods: {
@@ -220,15 +216,39 @@ ul {
 }
 
 @media (min-width: $screen-desktop-min) {
+  a {
+    &.social {
+      padding-right: 0;
+    }
+  }
+
   button.menu-toggle {
-    // display: none;
+    display: none;
   }
 
   div.menu-links {
-    position: static;
+    background-color: transparent;
+    border: 0;
+    display: inline;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 25px;
+
+    &.invisible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &.small-nav {
+      top: 10px;
+    }
   }
 
   ul {
+    display: inline-block;
+
     li {
       display: inline-block;
     }
