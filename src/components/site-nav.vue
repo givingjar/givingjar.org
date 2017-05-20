@@ -126,7 +126,9 @@ button.menu-toggle {
 
 ul {
   list-style: none;
+  margin: 7.5px 0;
   padding-left: 0;
+  text-align: right;
 }
 
 div.logo {
