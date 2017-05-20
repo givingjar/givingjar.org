@@ -21,6 +21,14 @@
             <li><a href="//blog.givingjar.org">Our Blog</a></li>
             <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
             <li><a href="//blog.givingjar.org/about/">Mission</a></li>
+            <li>
+              <a class="social" href="https://www.facebook.com/givingjarorg">
+                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+              </a>
+              <a class="social" href="https://www.twitter.com/givingjar">
+                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </transition>
@@ -103,6 +111,10 @@ a {
     padding: 15px;
     line-height: 20px;
     text-transform: none;
+  }
+
+  &.social {
+    padding: 10px;
   }
 }
 
