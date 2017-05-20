@@ -15,7 +15,10 @@
         <router-link to="/" class="brand">Giving Jar</router-link>
       </div>
 
-      <div v-if="showMenu">
+      <div
+        v-if="showMenu"
+        class="menu-links"
+      >
         <ul>
           <li><a href="https://givingjar.org">Newsletter</a></li>
           <li><a href="/tag/spotlight/">Spotlights</a></li>
@@ -69,22 +72,6 @@ body {
 <style lang="scss" scoped>
 @import '../design';
 
-nav {
-  background-color: $brand-colors-calm;
-  border-bottom: 1px solid $control-border-color;
-  font-family: $heading-font-family;
-  margin-bottom: 20px;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  .action-row {
-    line-height: 4rem;
-  }
-}
-
 a {
   color: $base-color;
   font-weight: 800;
@@ -124,13 +111,6 @@ button.menu-toggle {
   }
 }
 
-ul {
-  list-style: none;
-  margin: 7.5px 0;
-  padding-left: 0;
-  text-align: right;
-}
-
 div.logo {
   position: absolute;
   left: 50%;
@@ -143,5 +123,28 @@ div.logo {
   &.hide {
     opacity: 0;
   }
+}
+
+nav {
+  background-color: $brand-colors-calm;
+  border-bottom: 1px solid $control-border-color;
+  font-family: $heading-font-family;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .action-row {
+    line-height: 4rem;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 7.5px 0;
+  padding-left: 0;
+  text-align: right;
 }
 </style>
