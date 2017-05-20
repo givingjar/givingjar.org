@@ -153,7 +153,7 @@ button.menu-toggle {
 div.logo {
   position: fixed;
   left: 50%;
-  top: 35px;
+  top: 25px;
   width: 50px;
   margin-left: -25px;
   opacity: 1;
