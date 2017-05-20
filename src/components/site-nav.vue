@@ -136,7 +136,7 @@ button.menu-toggle {
 }
 
 div.logo {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 35px;
   width: 50px;
@@ -171,6 +171,22 @@ ul {
   margin: 7.5px 0;
   padding-left: 0;
   text-align: right;
+}
+
+@media (min-width: $screen-tablet-min) {
+  div.logo {
+    top: 25px;
+    width: 100px;
+    margin-left: -50px;
+  }
+
+  div.menu-links {
+    top: 91px;
+  }
+
+  nav {
+    padding: 25px 0;
+  }
 }
 
 //
