@@ -67,12 +67,8 @@ export default {
   },
   methods: {
     onWindowScroll () {
-      if (window.pageYOffset > 50) {
-        this.shrinkNav = true
-        this.showMenu = false
-      } else {
-        this.shrinkNav = false
-      }
+      this.shrinkNav = window.pageYOffset > 50
+      this.showMenu = false
       this.resetShowLogo()
     },
     resetShowLogo () {
