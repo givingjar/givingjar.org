@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="{ 'small-nav': shrinkNav }">
     <div class="action-row">
       <div class="">
         <button
@@ -16,7 +16,11 @@
       </div>
 
       <transition name="menu-links-transition">
-        <div v-if="showMenu" class="menu-links">
+        <div
+          v-if="showMenu"
+          class="menu-links"
+          :class="{ 'small-nav': shrinkNav }"
+        >
           <ul>
             <li><a href="//blog.givingjar.org">Our Blog</a></li>
             <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
@@ -51,16 +55,26 @@
 <script>
 export default {
   mounted () {
-    window.addEventListener('scroll', this.resetShowLogo)
+    window.addEventListener('scroll', this.onWindowScroll)
   },
   data () {
     return {
+      shrinkNav: false,
       showLogo: true,
       showMenu: false,
       compactNav: true
     }
   },
   methods: {
+    onWindowScroll () {
+      if (window.pageYOffset > 50) {
+        this.shrinkNav = true
+        this.showMenu = false
+      } else {
+        this.shrinkNav = false
+      }
+      this.resetShowLogo()
+    },
     resetShowLogo () {
       this.showLogo = !this.showMenu && window.pageYOffset <= 50
     },
@@ -152,14 +166,23 @@ div.logo {
 div.menu-links {
   @include menu-defaults();
   top: 61px;
+
+  &.small-nav {
+    top: 61px;
+  }
 }
 
 nav {
   @include menu-defaults();
   margin-bottom: 20px;
   padding: 10px 0;
+  transition: padding $transition-duration ease-in-out;
   top: 0;
   height: 40px;
+
+  &.small-nav {
+    padding: 10px 0;
+  }
 
   .action-row {
     line-height: 40px;
