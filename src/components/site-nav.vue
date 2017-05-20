@@ -15,26 +15,27 @@
         <router-link to="/" class="brand">Giving Jar</router-link>
       </div>
 
-      <div
-        v-if="showMenu"
-        class="menu-links"
-      >
-        <ul>
-          <li><a href="https://givingjar.org">Newsletter</a></li>
-          <li><a href="/tag/spotlight/">Spotlights</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
+      <transition name="menu-links-transition">
+        <div v-if="showMenu" class="menu-links">
+          <ul>
+            <li><a href="https://givingjar.org">Newsletter</a></li>
+            <li><a href="/tag/spotlight/">Spotlights</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+      </transition>
 
-      <div
-        v-if="!showMenu"
-        class="logo"
-        :class="{ 'hide': !showLogo }"
-      >
-        <a href="https://blog.givingjar.org">
-          <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
-        </a>
-      </div>
+      <transition name="logo-transition">
+        <div
+          v-if="!showMenu"
+          class="logo"
+          :class="{ 'hide': !showLogo }"
+        >
+          <a href="https://blog.givingjar.org">
+            <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
+          </a>
+        </div>
+      </transition>
     </div>
   </nav>
 </template>
@@ -71,6 +72,8 @@ body {
 
 <style lang="scss" scoped>
 @import '../design';
+
+$transition-duration: 0.3s;
 
 @mixin menu-defaults() {
   background-color: $brand-colors-calm;
@@ -127,7 +130,7 @@ div.logo {
   width: 50px;
   margin-left: -25px;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity $transition-duration ease-in-out;
 
   &.hide {
     opacity: 0;
@@ -136,20 +139,18 @@ div.logo {
 
 div.menu-links {
   @include menu-defaults();
-
   top: 61px;
 }
 
 nav {
   @include menu-defaults();
-
   margin-bottom: 20px;
   padding: 10px 0;
   top: 0;
   height: 40px;
 
   .action-row {
-    line-height: 4rem;
+    line-height: 40px;
   }
 }
 
@@ -158,5 +159,34 @@ ul {
   margin: 7.5px 0;
   padding-left: 0;
   text-align: right;
+}
+
+//
+// TRANSITIONS
+//
+
+.menu-links-transition-enter-active,
+.menu-links-transition-leave-active {
+  transition: all $transition-duration ease;
+}
+
+.menu-links-transition-enter,
+.menu-links-transition-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.logo-transition-enter-active,
+.logo-transition-leave-active {
+  img {
+    transition: opacity $transition-duration;
+  }
+}
+
+.logo-transition-enter,
+.logo-transition-leave-to {
+  img {
+    opacity: 0;
+  }
 }
 </style>
