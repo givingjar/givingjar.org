@@ -1,12 +1,13 @@
 <template>
   <nav>
-    <div class="">
+    <div class="action-row">
       <div class="">
         <button
           type="button"
           class="menu-toggle"
           :class="{ 'on': showMenu }"
           aria-label="Toggle navigation"
+          :aria-expanded="showMenu"
           @click="toggleMenu"
         >
           <i class="fa fa-bars" aria-hidden="true"></i>
@@ -24,14 +25,12 @@
 
       <div
         v-if="!showMenu"
-        class="logo-container"
+        class="logo"
         :class="{ 'hide': !showLogo }"
       >
-        <div class="logo">
-          <a href="https://blog.givingjar.org">
-            <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
-          </a>
-        </div>
+        <a href="https://blog.givingjar.org">
+          <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
+        </a>
       </div>
     </div>
   </nav>
@@ -75,10 +74,15 @@ nav {
   border-bottom: 1px solid $control-border-color;
   font-family: $heading-font-family;
   margin-bottom: 20px;
+  padding: 10px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+
+  .action-row {
+    line-height: 4rem;
+  }
 }
 
 a {
@@ -93,13 +97,22 @@ a {
   &:hover {
     color: $brand-colors-action;
   }
+
+  &.brand {
+    font-size: 2rem;
+    height: 50px;
+    padding: 15px;
+    line-height: 20px;
+    text-transform: none;
+  }
 }
 
 button.menu-toggle {
+  display: inline-block;
   color: darken($control-border-color, 35%);
   float: right;
-  padding: 9px 10px;
-  margin: 8px 15px 8px 0;
+  padding: 0 10px;
+  margin: auto 15px;
   background-color: transparent;
   background-image: none;
   border-radius: 4px;
@@ -116,21 +129,17 @@ ul {
   padding-left: 0;
 }
 
-div.logo-container {
-  opacity: 1;
+div.logo {
   position: absolute;
-  transition: opacity 0.5s ease-in-out;
   left: 50%;
+  top: 35px;
   width: 50px;
+  margin-left: -25px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 
   &.hide {
     opacity: 0;
-  }
-
-  div.logo {
-    width: 100%;
-    margin-left: -50%;
-    display: inline-block;
   }
 }
 </style>
