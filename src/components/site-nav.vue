@@ -36,9 +36,8 @@
 
       <transition name="logo-transition">
         <div
-          v-if="!showMenu"
+          v-if="!showMenu && showLogo"
           class="logo"
-          :class="{ 'invisible': !showLogo }"
         >
           <a href="https://blog.givingjar.org">
             <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
@@ -69,8 +68,12 @@ export default {
   },
   methods: {
     onWindowScroll () {
-      this.shrinkNav = window.pageYOffset > 50
-      this.showMenu = false
+      if (window.pageYOffset > 50) {
+        this.shrinkNav = true
+        this.showMenu = false
+      } else {
+        this.shrinkNav = false
+      }
       this.resetShowLogo()
     },
     resetShowLogo () {
