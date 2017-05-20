@@ -72,6 +72,15 @@ body {
 <style lang="scss" scoped>
 @import '../design';
 
+@mixin menu-defaults() {
+  background-color: $brand-colors-calm;
+  border-bottom: 1px solid $control-border-color;
+  font-family: $heading-font-family;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
 a {
   color: $base-color;
   font-weight: 800;
@@ -103,8 +112,8 @@ button.menu-toggle {
   background-color: transparent;
   background-image: none;
   border-radius: 4px;
-  width: 4rem;
-  height: 4rem;
+  width: 40px;
+  height: 40px;
 
   &.on {
     background-color: $control-border-color;
@@ -125,16 +134,19 @@ div.logo {
   }
 }
 
+div.menu-links {
+  @include menu-defaults();
+
+  top: 61px;
+}
+
 nav {
-  background-color: $brand-colors-calm;
-  border-bottom: 1px solid $control-border-color;
-  font-family: $heading-font-family;
+  @include menu-defaults();
+
   margin-bottom: 20px;
   padding: 10px 0;
-  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  height: 40px;
 
   .action-row {
     line-height: 4rem;
