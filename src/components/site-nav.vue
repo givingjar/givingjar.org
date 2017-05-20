@@ -18,9 +18,9 @@
       <transition name="menu-links-transition">
         <div v-if="showMenu" class="menu-links">
           <ul>
-            <li><a href="https://givingjar.org">Newsletter</a></li>
-            <li><a href="/tag/spotlight/">Spotlights</a></li>
-            <li><a href="/about/">About</a></li>
+            <li><a href="//blog.givingjar.org">Our Blog</a></li>
+            <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
+            <li><a href="//blog.givingjar.org/about/">Mission</a></li>
           </ul>
         </div>
       </transition>
