@@ -15,33 +15,30 @@
         <router-link to="/" class="brand">Giving Jar</router-link>
       </div>
 
-      <transition name="menu-links-transition">
-        <div
-          v-if="showMenu"
-          class="menu-links"
-          :class="{ 'small-nav': shrinkNav }"
-        >
-          <ul>
-            <li><a href="//blog.givingjar.org">Our Blog</a></li>
-            <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
-            <li><a href="//blog.givingjar.org/about/">Mission</a></li>
-            <li>
-              <a class="social" href="https://www.facebook.com/givingjarorg">
-                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-              </a>
-              <a class="social" href="https://www.twitter.com/givingjar">
-                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </transition>
+      <div
+        class="menu-links"
+        :class="{ 'small-nav': shrinkNav, 'invisible': !showMenu }"
+      >
+        <ul>
+          <li><a href="//blog.givingjar.org">Our Blog</a></li>
+          <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
+          <li><a href="//blog.givingjar.org/about/">Mission</a></li>
+          <li>
+            <a class="social" href="https://www.facebook.com/givingjarorg">
+              <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="social" href="https://www.twitter.com/givingjar">
+              <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <transition name="logo-transition">
         <div
           v-if="!showMenu"
           class="logo"
-          :class="{ 'hide': !showLogo }"
+          :class="{ 'invisible': !showLogo }"
         >
           <a href="https://blog.givingjar.org">
             <img src="../assets/img/giving-jar-icon-square.svg" alt="Giving Jar Logo">
@@ -63,6 +60,11 @@ export default {
       showLogo: true,
       showMenu: false,
       compactNav: true
+    }
+  },
+  computed: {
+    showMenuLinks () {
+      return this.showMenu
     }
   },
   methods: {
@@ -153,15 +155,16 @@ div.logo {
   margin-left: -25px;
   opacity: 1;
   transition: opacity $transition-duration ease-in-out;
-
-  &.hide {
-    opacity: 0;
-  }
 }
 
 div.menu-links {
   @include menu-defaults();
   top: 61px;
+  transition: all $transition-duration ease-in-out;
+
+  &.invisible {
+    transform: translateY(-20px);
+  }
 
   &.small-nav {
     top: 61px;
@@ -192,6 +195,11 @@ ul {
   text-align: right;
 }
 
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
 @media (min-width: $screen-tablet-min) {
   div.logo {
     top: 25px;
@@ -208,20 +216,25 @@ ul {
   }
 }
 
+@media (min-width: $screen-desktop-min) {
+  button.menu-toggle {
+    // display: none;
+  }
+
+  div.menu-links {
+    position: static;
+  }
+
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+}
+
 //
 // TRANSITIONS
 //
-
-.menu-links-transition-enter-active,
-.menu-links-transition-leave-active {
-  transition: all $transition-duration ease;
-}
-
-.menu-links-transition-enter,
-.menu-links-transition-leave-to {
-  transform: translateY(-20px);
-  opacity: 0;
-}
 
 .logo-transition-enter-active,
 .logo-transition-leave-active {
