@@ -169,7 +169,7 @@ div.menu-links {
   }
 
   &.small-nav {
-    top: 61px;
+    top: 51px;
   }
 }
 
@@ -182,7 +182,7 @@ nav {
   height: 40px;
 
   &.small-nav {
-    padding: 10px 0;
+    padding: 5px 0;
   }
 
   .action-row {
@@ -245,7 +245,7 @@ ul {
     }
 
     &.small-nav {
-      top: 10px;
+      top: 2px;
     }
   }
 
