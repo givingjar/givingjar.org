@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     onWindowScroll () {
-      if (window.pageYOffset > 50) {
+      if (this.verticalOffset() > 50) {
         this.shrinkNav = true
         this.showMenu = false
       } else {
@@ -73,11 +73,14 @@ export default {
       this.resetShowLogo()
     },
     resetShowLogo () {
-      this.showLogo = !this.showMenu && window.pageYOffset <= 50
+      this.showLogo = !this.showMenu && this.verticalOffset() <= 50
     },
     toggleMenu () {
       this.showMenu = !this.showMenu
       this.resetShowLogo()
+    },
+    verticalOffset () {
+      return window.pageYOffset
     }
   }
 }
