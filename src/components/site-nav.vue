@@ -2,6 +2,19 @@
   <nav :class="{ 'small-nav': shrinkNav }">
     <div class="action-row">
       <div>
+        <router-link to="/" class="brand">Giving Jar</router-link>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          :class="{ 'small-nav': shrinkNav, 'on': showMenu }"
+          aria-label="Toggle navigation"
+          :aria-expanded="showMenu"
+          @click="toggleMenu"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
         <div
           class="menu-links"
           :class="{ 'small-nav': shrinkNav, 'invisible': !showMenu }"
@@ -20,19 +33,6 @@
             </li>
           </ul>
         </div>
-
-        <button
-          type="button"
-          class="menu-toggle"
-          :class="{ 'on': showMenu }"
-          aria-label="Toggle navigation"
-          :aria-expanded="showMenu"
-          @click="toggleMenu"
-        >
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-
-        <router-link to="/" class="brand">Giving Jar</router-link>
       </div>
 
       <transition name="logo-transition">
@@ -87,8 +87,16 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../design';
+
 body {
   padding-top: 80px;
+}
+
+@media (min-width: $screen-tablet-min) {
+  body {
+    padding-top: 130px;
+  }
 }
 </style>
 
@@ -133,19 +141,26 @@ a {
 }
 
 button.menu-toggle {
-  display: inline-block;
-  color: darken($control-border-color, 35%);
-  float: right;
-  padding: 0 10px;
-  margin: auto 15px;
   background-color: transparent;
   background-image: none;
   border-radius: 4px;
-  width: 40px;
+  color: darken($control-border-color, 35%);
+  display: inline-block;
   height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  position: fixed;
+  right: 15px;
+  top: 10px;
+  transition: top $transition-duration ease-in-out;
+  width: 40px;
 
   &.on {
     background-color: $control-border-color;
+  }
+
+  &.small-nav {
+    top: 5px;
   }
 }
 
@@ -203,6 +218,10 @@ ul {
 }
 
 @media (min-width: $screen-tablet-min) {
+  button.menu-toggle {
+    top: 25px;
+  }
+
   div.logo {
     top: 25px;
     width: 100px;
