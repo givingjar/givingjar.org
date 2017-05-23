@@ -24,10 +24,10 @@
             <li><a href="https://bit.ly/GivingJarShopper">Downloads</a></li>
             <li><a href="//blog.givingjar.org/about/">Mission</a></li>
             <li>
-              <a class="social" href="https://www.facebook.com/givingjarorg">
+              <a class="social" href="https://www.facebook.com/givingjarorg" aria-label="Facebook">
                 <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
               </a>
-              <a class="social" href="https://www.twitter.com/givingjar">
+              <a class="social" href="https://www.twitter.com/givingjar" aria-label="Twitter">
                 <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
               </a>
             </li>
