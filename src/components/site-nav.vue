@@ -252,6 +252,7 @@ ul {
     background-color: transparent;
     border: 0;
     display: inline;
+    left: initial;
     padding: 15px;
     position: absolute;
     right: 0;
