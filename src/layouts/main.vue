@@ -4,15 +4,17 @@
     <main>
       <slot></slot>
     </main>
+    <SiteFooter/>
   </div>
 </template>
 
 <script>
+import SiteFooter from '@/components/site-footer'
 import SiteNav from '@/components/site-nav'
 
 export default {
   components: {
-    SiteNav
+    SiteFooter, SiteNav
   }
 }
 </script>
