@@ -23,6 +23,7 @@ export default {
 @import '../design';
 
 main {
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;

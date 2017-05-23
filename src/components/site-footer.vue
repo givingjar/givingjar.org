@@ -45,6 +45,12 @@ div {
     text-align: center;
   }
 
+  &.mission {
+    blockquote {
+      margin: 15px 45px;
+    }
+  }
+
   &.quick-links {
     a {
       color: $base-color;
@@ -68,6 +74,7 @@ div {
 footer {
   background-color: $brand-colors-calm;
   border-top: 1px solid $control-border-color;
+  box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   font-size: 1.4rem;
