@@ -38,16 +38,18 @@ export default {
 @import '../design';
 
 div {
+  flex: 1 100%;
   margin: 0 auto;
+  text-align: center;
 
   &.copyright {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   &.mission {
     blockquote {
       margin: 15px 45px;
+      text-align: left;
     }
   }
 
@@ -76,7 +78,7 @@ footer {
   border-top: 1px solid $control-border-color;
   box-sizing: border-box;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   font-size: 1.4rem;
   margin-top: 50px;
   padding: 15px 15px 0;
@@ -91,6 +93,33 @@ ul {
   list-style: none;
   margin: 7.5px 0;
   padding-left: 0;
-  text-align: center;
+}
+
+@media (min-width: $screen-tablet-min) {
+  div {
+    &.copyright {
+      flex: 0 0 100%;
+      order: 3;
+    }
+
+    &.mission {
+      flex: 1 80%;
+      order: 1;
+
+      blockquote {
+        margin-left: 0;
+      }
+    }
+
+    &.quick-links {
+      flex: 1 20%;
+      order: 2;
+      text-align: right;
+
+      a.social {
+        padding-right: 0;
+      }
+    }
+  }
 }
 </style>
