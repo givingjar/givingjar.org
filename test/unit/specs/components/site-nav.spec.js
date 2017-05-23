@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import SiteNav from '@/components/site-nav'
-import router from '@/router'
+import newComponent from '../../helpers/new-component'
 
 const MockConstructor = Vue.extend(SiteNav)
 
@@ -15,10 +15,7 @@ const mockSiteNav = pageYOffset => {
 }
 
 const newSiteNav = () => {
-  return new Vue({
-    router,
-    ...SiteNav
-  }).$mount()
+  return newComponent(SiteNav)
 }
 
 describe('site-nav.vue', () => {
