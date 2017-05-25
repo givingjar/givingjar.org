@@ -34,92 +34,74 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../design';
+<style lang="stylus" scoped>
+@import '../_theme'
 
-div {
-  flex: 1 100%;
-  margin: 0 auto;
-  text-align: center;
+div
+  flex: 1 100%
+  margin: 0 auto
+  text-align: center
 
-  &.copyright {
-    font-size: 1.2rem;
-  }
+  &.copyright
+    font-size: 1.2rem
 
-  &.mission {
-    blockquote {
-      margin: 15px 45px;
-      text-align: left;
-    }
-  }
+  &.mission
+    blockquote
+      margin: 15px 45px
+      text-align: left
 
-  &.quick-links {
-    a {
-      color: $base-color;
-      font-weight: 800;
-      letter-spacing: 1px;
-      padding: 10px 15px;
-      text-decoration: none;
-      text-transform: uppercase;
+  &.quick-links
+    a
+      color: $base-color
+      font-weight: 800
+      letter-spacing: 1px
+      padding: 10px 15px
+      text-decoration: none
+      text-transform: uppercase
 
-      &:hover {
-        color: $brand-colors-action;
-      }
+      &:hover
+        color: $brand-colors-action
 
-      &.social {
-        padding: 10px;
-      }
-    }
-  }
-}
+      &.social
+        padding: 10px
 
-footer {
-  background-color: $brand-colors-calm;
-  border-top: 1px solid $control-border-color;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.4rem;
-  margin-top: 50px;
-  padding: 15px 15px 0;
-  width: 100%;
+footer
+  background-color: $brand-colors-calm
+  border-top: 1px solid $control-border-color
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+  font-size: 1.4rem
+  margin-top: 50px
+  padding: 15px 15px 0
+  width: 100%
 
-  p {
-    margin: 0;
-  }
-}
+  p
+    margin: 0
 
-ul {
-  list-style: none;
-  margin: 7.5px 0;
-  padding-left: 0;
-}
+ul
+  list-style: none
+  margin: 7.5px 0
+  padding-left: 0
 
-@media (min-width: $screen-tablet-min) {
-  div {
-    &.copyright {
-      flex: 0 0 100%;
-      order: 3;
-    }
+@media (min-width: $screen-tablet-min)
+  div
+    &.copyright
+      flex: 0 0 100%
+      order: 3
 
-    &.mission {
-      flex: 1 80%;
-      order: 1;
+    &.mission
+      flex: 1 80%
+      order: 1
 
-      blockquote {
-        margin-left: 0;
-      }
-    }
+      blockquote
+        margin-left: 0
 
-    &.quick-links {
-      flex: 1 20%;
-      order: 2;
-      text-align: right;
+    &.quick-links
+      flex: 1 20%
+      order: 2
+      text-align: right
 
-      a.social {
-        padding-right: 0;
-      }
-    }
-  }
-}
+      a.social
+        padding-right: 0
 </style>

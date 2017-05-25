@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss">
-@import 'design';
-@import 'default';
+<style lang="stylus">
+@import '_theme'
+@import '_main'
 </style>

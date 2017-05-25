@@ -86,213 +86,175 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../design';
+<style lang="stylus">
+@import '../_theme'
 
-body {
-  padding-top: 80px;
-}
+body
+  padding-top: 80px
 
-@media (min-width: $screen-tablet-min) {
-  body {
-    padding-top: 130px;
-  }
-}
+@media (min-width: $screen-tablet-min)
+  body
+    padding-top: 130px
 </style>
 
-<style lang="scss" scoped>
-@import '../design';
+<style lang="stylus" scoped>
+@import '../_theme'
 
-$transition-duration: 0.3s;
+$transition-duration = 0.3s
 
-@mixin menu-defaults() {
-  background-color: $brand-colors-calm;
-  border-bottom: 1px solid $control-border-color;
-  font-family: $heading-font-family;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
+$menu-defaults()
+  background-color: $brand-colors-calm
+  border-bottom: 1px solid $control-border-color
+  font-family: $heading-font-family
+  position: fixed
+  left: 0
+  right: 0
 
-a {
-  color: $base-color;
-  font-weight: 800;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  padding: 10px 15px;
-  text-decoration: none;
-  text-transform: uppercase;
+a
+  color: $base-color
+  font-weight: 800
+  font-size: 1.4rem
+  letter-spacing: 1px
+  padding: 10px 15px
+  text-decoration: none
+  text-transform: uppercase
 
-  &:hover {
-    color: $brand-colors-action;
-  }
+  &:hover
+    color: $brand-colors-action
 
-  &.brand {
-    font-size: 2rem;
-    height: 50px;
-    padding: 15px;
-    line-height: 20px;
-    text-transform: none;
-  }
+  &.brand
+    font-size: 2rem
+    height: 50px
+    padding: 15px
+    line-height: 20px
+    text-transform: none
 
-  &.social {
-    padding: 10px;
-  }
-}
+  &.social
+    padding: 10px
 
-button.menu-toggle {
-  background-color: transparent;
-  background-image: none;
-  border-radius: 4px;
-  color: darken($control-border-color, 35%);
-  display: inline-block;
-  height: 40px;
-  margin: 0;
-  padding: 0 10px;
-  position: fixed;
-  right: 15px;
-  top: 10px;
-  transition: top $transition-duration ease-in-out;
-  width: 40px;
+button.menu-toggle
+  background-color: transparent
+  background-image: none
+  border-radius: 4px
+  color: darken($control-border-color, 35%)
+  display: inline-block
+  height: 40px
+  margin: 0
+  padding: 0 10px
+  position: fixed
+  right: 15px
+  top: 10px
+  transition: top $transition-duration ease-in-out
+  width: 40px
 
-  &.on {
-    background-color: $control-border-color;
-  }
+  &.on
+    background-color: $control-border-color
 
-  &.small-nav {
-    top: 5px;
-  }
-}
+  &.small-nav
+    top: 5px
 
-div.logo {
-  position: fixed;
-  left: 50%;
-  top: 25px;
-  width: 50px;
-  margin-left: -25px;
-  opacity: 1;
-  transition: opacity $transition-duration ease-in-out;
-}
+div.logo
+  position: fixed
+  left: 50%
+  top: 25px
+  width: 50px
+  margin-left: -25px
+  opacity: 1
+  transition: opacity $transition-duration ease-in-out
 
-div.menu-links {
-  @include menu-defaults();
-  top: 61px;
-  transition: all $transition-duration ease-in-out;
+div.menu-links
+  $menu-defaults()
+  top: 61px
+  transition: all $transition-duration ease-in-out
 
-  &.invisible {
-    transform: translateY(-20px);
-  }
+  &.invisible
+    transform: translateY(-20px)
 
-  &.small-nav {
-    top: 51px;
-  }
-}
+  &.small-nav
+    top: 51px
 
-nav {
-  @include menu-defaults();
-  margin-bottom: 20px;
-  padding: 10px 0;
-  transition: padding $transition-duration ease-in-out;
-  top: 0;
-  height: 40px;
+nav
+  $menu-defaults()
+  margin-bottom: 20px
+  padding: 10px 0
+  transition: padding $transition-duration ease-in-out
+  top: 0
+  height: 40px
 
-  &.small-nav {
-    padding: 5px 0;
-  }
+  &.small-nav
+    padding: 5px 0
 
-  .action-row {
-    line-height: 40px;
-  }
-}
+  .action-row
+    line-height: 40px
 
-ul {
-  list-style: none;
-  margin: 7.5px 0;
-  padding-left: 0;
-  text-align: right;
-}
+ul
+  list-style: none
+  margin: 7.5px 0
+  padding-left: 0
+  text-align: right
 
-.invisible {
-  visibility: hidden;
-  opacity: 0;
-}
+.invisible
+  visibility: hidden
+  opacity: 0
 
-@media (min-width: $screen-tablet-min) {
-  button.menu-toggle {
-    top: 25px;
-  }
+@media (min-width: $screen-tablet-min)
+  button.menu-toggle
+    top: 25px
 
-  div.logo {
-    top: 25px;
-    width: 100px;
-    margin-left: -50px;
-  }
+  div.logo
+    top: 25px
+    width: 100px
+    margin-left: -50px
 
-  div.menu-links {
-    top: 91px;
-  }
+  div.menu-links
+    top: 91px
 
-  nav {
-    padding: 25px 0;
-  }
-}
+  nav
+    padding: 25px 0
 
-@media (min-width: $screen-desktop-min) {
-  a {
-    &.social {
-      padding-right: 0;
-    }
-  }
+@media (min-width: $screen-desktop-min)
+  a
+    &.social
+      padding-right: 0
 
-  button.menu-toggle {
-    display: none;
-  }
+  button.menu-toggle
+    display: none
 
-  div.menu-links {
-    background-color: transparent;
-    border: 0;
-    display: inline;
-    left: initial;
-    padding: 15px;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    top: 25px;
+  div.menu-links
+    background-color: transparent
+    border: 0
+    display: inline
+    left: initial
+    padding: 15px
+    position: absolute
+    right: 0
+    text-align: right
+    top: 25px
 
-    &.invisible {
-      visibility: visible;
-      opacity: 1;
-    }
+    &.invisible
+      visibility: visible
+      opacity: 1
 
-    &.small-nav {
-      top: 2px;
-    }
-  }
+    &.small-nav
+      top: 2px
 
-  ul {
-    display: inline-block;
+  ul
+    display: inline-block
 
-    li {
-      display: inline-block;
-    }
-  }
-}
+    li
+      display: inline-block
 
 //
 // TRANSITIONS
 //
 
-.logo-transition-enter-active,
-.logo-transition-leave-active {
-  img {
-    transition: opacity $transition-duration;
-  }
-}
+.logo-transition-enter-active
+.logo-transition-leave-active
+  img
+    transition: opacity $transition-duration
 
 .logo-transition-enter,
-.logo-transition-leave-to {
-  img {
-    opacity: 0;
-  }
-}
+.logo-transition-leave-to
+  img
+    opacity: 0
 </style>
