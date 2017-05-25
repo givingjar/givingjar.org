@@ -14,7 +14,7 @@
     </div>
     <div class="mission">
       <blockquote>
-        Our mission is to make it easy for nonprofits to raise awareness of their cause and collect donations online.
+        Our mission is to make it easy to find nonprofits and donate to them online.
       </blockquote>
     </div>
     <div class="copyright">
