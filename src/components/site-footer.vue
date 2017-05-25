@@ -51,6 +51,8 @@ div
       text-align: left
 
   &.quick-links
+    margin: auto 0
+
     a
       color: $base-color
       font-weight: 800
@@ -73,7 +75,7 @@ footer
   flex-wrap: wrap
   font-size: 1.4rem
   margin-top: 50px
-  padding: 15px 15px 0
+  padding: 0 15px
   width: 100%
 
   p
