@@ -48,7 +48,7 @@ div
   &.mission
     blockquote
       margin: 15px 45px
-      text-align: left
+      text-align: center
 
   &.quick-links
     margin: auto 0
@@ -75,7 +75,7 @@ footer
   flex-wrap: wrap
   font-size: 1.4rem
   margin-top: 50px
-  padding: 0 15px
+  padding: 5px 15px 0
   width: 100%
 
   p
@@ -98,6 +98,7 @@ ul
 
       blockquote
         margin-left: 0
+        text-align: left
 
     &.quick-links
       flex: 1 20%
