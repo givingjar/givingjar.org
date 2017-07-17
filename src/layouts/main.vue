@@ -27,6 +27,8 @@ main
   margin-left: auto
   margin-right: auto
   padding: 0 15px
+  position: relative
+  z-index: -1
 
 @media (min-width: $screen-tablet-min)
   main

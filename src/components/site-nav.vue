@@ -178,9 +178,8 @@ nav
   $menu-defaults()
   margin-bottom: 20px
   padding: 10px 0
-  transition: padding $transition-duration ease-in-out
   top: 0
-  height: 40px
+  transition: padding $transition-duration ease-in-out
 
   &.small-nav
     padding: 5px 0

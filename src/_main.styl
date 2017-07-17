@@ -1,7 +1,13 @@
 @import '_theme'
 
 html
+  box-sizing: border-box
   font-size: 62.5%
+
+*
+*:before
+*:after
+  box-sizing: inherit
 
 body
   -moz-osx-font-smoothing: grayscale
@@ -10,7 +16,7 @@ body
   color: $base-color
   font-family: $base-font-family
   font-size: 1.8rem
-  font-weight: 400
+  font-weight: $font-weight-normal
   line-height: 1.6
 
 h1
@@ -20,7 +26,7 @@ h4
 h5
 h6
   font-family: $heading-font-family
-  font-weight: 300
+  font-weight: $font-weight-light
   margin-bottom: 2rem
   margin-top: 0
 
@@ -37,10 +43,23 @@ blockquote
 
 button
 input[type="button"]
-  border: 1px solid $control-border-color
+  background-color: $brand-colors-action
+  border: 1px solid $brand-colors-action
   border-radius: $control-border-radius
+  color: $brand-colors-bright
   cursor: pointer
+  display: block
+  font-family: $heading-font-family
+  font-size: 1.1rem
+  font-weight: $font-weight-heavy
+  letter-spacing: .1rem
+  line-height: 1.1rem
   margin: 0
+  padding: 5px 10px
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  white-space: nowrap
 
   &:focus
     outline: 0
