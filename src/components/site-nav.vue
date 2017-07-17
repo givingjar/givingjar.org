@@ -12,7 +12,7 @@
           :aria-expanded="showMenu"
           @click="toggleMenu"
         >
-          <i class="fa fa-bars" aria-hidden="true"></i>
+          <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
         </button>
 
         <div
@@ -135,6 +135,7 @@ a
 button.menu-toggle
   background-color: transparent
   background-image: none
+  border: 1px solid $control-border-color
   border-radius: 4px
   color: darken($control-border-color, 35%)
   display: inline-block
