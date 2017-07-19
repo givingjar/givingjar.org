@@ -1,17 +1,17 @@
 <template>
   <Layout>
-    <Carousel1/>
+    <Carousel/>
     <slot></slot>
   </Layout>
 </template>
 
 <script>
-import Carousel1 from '@/components/carousel1'
+import Carousel from '@/components/carousel'
 import Layout from '@/layouts/main'
 
 export default {
   components: {
-    Carousel1, Layout
+    Carousel, Layout
   }
 }
 </script>

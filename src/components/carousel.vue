@@ -27,8 +27,8 @@ export default {
 @import '../_theme'
 
 #carousel
+  margin-bottom: 4rem
   width: 100%
-  height: 67vw
 
 figure
   margin: 0
@@ -40,21 +40,15 @@ figure
     margin: 0 auto
 
 figcaption
-  background-color: rgba(0, 0, 0, .7)
-  border-radius: $control-border-radius
-  bottom: 0
-  color: $brand-colors-bright
   font-size: 1.4rem
-  margin: 0
-  padding: 0
-  position: absolute
+  margin: 1rem 0
+  padding: 5px
   width: 100%
 
   button
   input
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-    width: 100%
+    margin: 0 auto
+    width: 50%
 
   h1
   h2
@@ -63,12 +57,14 @@ figcaption
   h5
   h6
     line-height: 1
-    margin-bottom: 5px
+    margin: 1rem 0
+    text-align: center
 
   p
+    font-style: italic
     line-height: 1
-    margin: 0
+    text-align: center
 
   .summary
-    padding: 5px
+    padding: 0
 </style>
