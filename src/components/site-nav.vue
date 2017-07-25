@@ -180,6 +180,7 @@ nav
   padding: 10px 0
   top: 0
   transition: padding $transition-duration ease-in-out
+  z-index: 2147483647
 
   &.small-nav
     padding: 5px 0
