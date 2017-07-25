@@ -4,11 +4,21 @@
       <div
         v-for="(slots, slotName, index) in $slots"
         v-show="index === activeSlide"
-        class="slide fadeInFromRight"
+        class="slide"
+        :class="{
+          fadeInFromLeft: index === activeSlide && activeSlide < previousSlide,
+          fadeInFromRight: index === activeSlide && activeSlide > previousSlide,
+          fadeOutToLeft: index === previousSlide && activeSlide > previousSlide,
+          fadeOutToRight: index === previousSlide && activeSlide < previousSlide
+        }"
       >
         <slot :name="slotName"/>
       </div>
     </div>
+    <nav>
+      <input type="button" name="nav-left" value="Prev" @click="onPreviousSlide">
+      <input type="button" name="nav-right" value="Next" @click="onNextSlide">
+    </nav>
   </section>
 </template>
 
@@ -16,7 +26,23 @@
 export default {
   data () {
     return {
-      activeSlide: 0
+      activeSlide: 0,
+      previousSlide: null,
+      totalSlides: Object.keys(this.$slots).length
+    }
+  },
+  methods: {
+    onNextSlide (event) {
+      if (this.activeSlide < this.totalSlides - 1) {
+        this.previousSlide = this.activeSlide
+        this.activeSlide += 1
+      }
+    },
+    onPreviousSlide (event) {
+      if (this.activeSlide > 0) {
+        this.previousSlide = this.activeSlide
+        this.activeSlide -= 1
+      }
     }
   }
 }
@@ -25,13 +51,25 @@ export default {
 <style lang="stylus" scoped>
 #carousel
   margin-bottom: 4rem
-  width: 100%
+
+.all-slides
+  align-items: center
+  display: flex
+  overflow: hidden
 
 .slide
   animation-duration: 1s
   animation-fill-mode: both
   display: inline-block
+
+nav
+  display: block
+  text-align: center
   width: 100%
+
+  input[type="button"]
+    cursor: pointer
+    display: inline-block
 
 //
 // CAROUSEL ANIMATIONS
