@@ -1,5 +1,5 @@
 <template>
-  <section id="carousel">
+  <section id="carousel" v-resize="updateHeight">
     <div id="all-slides">
       <div
         v-for="(slots, slotName, index) in $slots"
@@ -23,7 +23,12 @@
 </template>
 
 <script>
+import resize from 'vue-resize-directive'
+
 export default {
+  directives: {
+    resize
+  },
   created () {
     window.addEventListener('load', this.updateHeight)
   },
