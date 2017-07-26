@@ -59,19 +59,28 @@ export default {
   created () {
     window.addEventListener('load', this.updateHeight)
   },
+  mounted () {
+    this.resumeAutoSlideTimer()
+  },
   data () {
     return {
       activeSlide: 0,
+      autoSlideTimer: null,
       previousSlide: null,
       totalSlides: Object.keys(this.$slots).length
     }
   },
-  computed: {
-    slideHeight () {
-      return this.$slots
-    }
-  },
   methods: {
+    pauseAutoSlideTimer () {
+      if (this.autoSlideTimer) {
+        clearInterval(this.autoSlideTimer)
+        this.autoSlideTimer = null
+      }
+    },
+    resumeAutoSlideTimer () {
+      this.pauseAutoSlideTimer()
+      this.autoSlideTimer = setInterval(this.showNextSlide, 8000)
+    },
     showNextSlide () {
       const nextSlide = this.activeSlide < this.totalSlides - 1
         ? this.activeSlide + 1
@@ -90,6 +99,7 @@ export default {
       if (this.activeSlide !== selectedSlide) {
         this.previousSlide = this.activeSlide
         this.activeSlide = selectedSlide
+        this.resumeAutoSlideTimer()
       }
     },
     updateHeight () {
