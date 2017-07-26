@@ -1,11 +1,11 @@
 <template>
   <section id="carousel">
-    <div class="all-slides">
+    <div id="all-slides">
       <div
         v-for="(slots, slotName, index) in $slots"
-        v-show="index === activeSlide"
         class="slide"
         :class="{
+          startSlide: index === activeSlide && !previousSlide,
           fadeInFromLeft: index === activeSlide && activeSlide < previousSlide,
           fadeInFromRight: index === activeSlide && activeSlide > previousSlide,
           fadeOutToLeft: index === previousSlide && activeSlide > previousSlide,
@@ -24,6 +24,9 @@
 
 <script>
 export default {
+  created () {
+    window.addEventListener('load', this.updateHeight)
+  },
   data () {
     return {
       activeSlide: 0,
@@ -31,17 +34,36 @@ export default {
       totalSlides: Object.keys(this.$slots).length
     }
   },
+  computed: {
+    slideHeight () {
+      return this.$slots
+    }
+  },
   methods: {
-    onNextSlide (event) {
+    onNextSlide () {
       if (this.activeSlide < this.totalSlides - 1) {
         this.previousSlide = this.activeSlide
         this.activeSlide += 1
       }
     },
-    onPreviousSlide (event) {
+    onPreviousSlide () {
       if (this.activeSlide > 0) {
         this.previousSlide = this.activeSlide
         this.activeSlide -= 1
+      }
+    },
+    updateHeight () {
+      let maxHeight = 0
+      Object.keys(this.$slots).forEach(slotKey => {
+        const slot = this.$slots[slotKey][0]
+        if (slot.elm.clientHeight > maxHeight) {
+          maxHeight = slot.elm.clientHeight
+        }
+      })
+      document.getElementById('all-slides').style.height = maxHeight + 'px'
+      const slides = document.getElementsByClassName('slide')
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.height = maxHeight + 'px'
       }
     }
   }
@@ -50,17 +72,24 @@ export default {
 
 <style lang="stylus" scoped>
 #carousel
-  margin-bottom: 4rem
+  margin-bottom: 2rem
 
-.all-slides
-  align-items: center
-  display: flex
+#all-slides
   overflow: hidden
+  position: relative
+  white-space: nowrap
 
 .slide
-  animation-duration: 1s
+  animation-duration: 2s
   animation-fill-mode: both
-  display: inline-block
+  align-items: center
+  display: flex
+  opacity: 0
+  position: absolute
+  white-space: normal
+
+.startSlide
+  opacity: 1
 
 nav
   display: block
