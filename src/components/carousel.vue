@@ -16,8 +16,35 @@
       </div>
     </div>
     <nav>
-      <input type="button" name="nav-left" value="Prev" @click="onPreviousSlide">
-      <input type="button" name="nav-right" value="Next" @click="onNextSlide">
+      <div>
+        <a
+          @click="showPreviousSlide"
+          aria-label="View previous slide"
+          title="View previous slide"
+        >
+          <span class="fa fa-arrow-left fa-lg" aria-hidden="true"></span>
+        </a>
+        <a
+          v-for="(slots, slotName, index) in $slots"
+          @click="showSpecificSlide(index)"
+          :aria-label="'View slide ' + (index + 1)"
+          :title="'View slide ' + (index + 1)"
+          class="picker"
+          :class="{
+            startPicker: index === activeSlide && !previousSlide,
+            fadeInPicker: index === activeSlide && previousSlide !== null,
+            fadeOutPicker: index === previousSlide
+          }"
+        >
+        </a>
+        <a
+          @click="showNextSlide"
+          aria-label="View next slide"
+          title="View next slide"
+        >
+          <span class="fa fa-arrow-right fa-lg" aria-hidden="true"></span>
+        </a>
+      </div>
     </nav>
   </section>
 </template>
@@ -45,16 +72,24 @@ export default {
     }
   },
   methods: {
-    onNextSlide () {
-      if (this.activeSlide < this.totalSlides - 1) {
-        this.previousSlide = this.activeSlide
-        this.activeSlide += 1
-      }
+    showNextSlide () {
+      const nextSlide = this.activeSlide < this.totalSlides - 1
+        ? this.activeSlide + 1
+        : 0
+
+      this.showSpecificSlide(nextSlide)
     },
-    onPreviousSlide () {
-      if (this.activeSlide > 0) {
+    showPreviousSlide () {
+      const previousSlide = this.activeSlide > 0
+        ? this.activeSlide - 1
+        : this.totalSlides - 1
+
+      this.showSpecificSlide(previousSlide)
+    },
+    showSpecificSlide (selectedSlide) {
+      if (this.activeSlide !== selectedSlide) {
         this.previousSlide = this.activeSlide
-        this.activeSlide -= 1
+        this.activeSlide = selectedSlide
       }
     },
     updateHeight () {
@@ -76,6 +111,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../_theme'
+
+$animation-duration = 2s
+
 #carousel
   margin-bottom: 2rem
 
@@ -84,8 +123,22 @@ export default {
   position: relative
   white-space: nowrap
 
+.picker
+  animation-duration: $animation-duration
+  animation-fill-mode: both
+  border: 2px solid $brand-colors-action
+  border-radius: 50%
+  display: inline-block
+  height: 1.5rem
+  margin: 0 .5rem
+  vertical-align: middle
+  width: 1.5rem
+
+  &:hover
+    border: 2px solid $brand-colors-action-dark
+
 .slide
-  animation-duration: 2s
+  animation-duration: $animation-duration
   animation-fill-mode: both
   align-items: center
   display: flex
@@ -93,17 +146,25 @@ export default {
   position: absolute
   white-space: normal
 
+.startPicker
+  background-color: $brand-colors-action
+
 .startSlide
   opacity: 1
 
 nav
-  display: block
+  padding: 1px 0 0
+  background-color: $control-border-color
+  background-image: linear-gradient(to right, #fff, $control-border-color 20%, $control-border-color 80%, #fff)
   text-align: center
+  white-space: nowrap
   width: 100%
 
-  input[type="button"]
+  a
     cursor: pointer
-    display: inline-block
+
+  div
+    background-color: #fff
 
 //
 // CAROUSEL ANIMATIONS
@@ -132,6 +193,26 @@ nav
 
 .fadeInFromRight
   animation-name: fadeInFromRight
+
+@keyframes fadeInPicker
+  from
+    background-color: #fff
+
+  to
+    background: $brand-colors-action
+
+.fadeInPicker
+  animation-name: fadeInPicker
+
+@keyframes fadeOutPicker
+  from
+    background-color: $brand-colors-action
+
+  to
+    background: #fff
+
+.fadeOutPicker
+  animation-name: fadeOutPicker
 
 @keyframes fadeOutToLeft
   from
