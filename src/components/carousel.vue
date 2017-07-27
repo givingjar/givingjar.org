@@ -19,8 +19,8 @@
       <div>
         <a
           @click="showPreviousSlide"
-          aria-label="View previous slide"
-          title="View previous slide"
+          aria-label="Click, tap, or press left to show the previous slide"
+          title="Click, tap, or press left to show the previous slide"
         >
           <span class="fa fa-arrow-left fa-lg" aria-hidden="true"></span>
         </a>
@@ -39,8 +39,8 @@
         </a>
         <a
           @click="showNextSlide"
-          aria-label="View next slide"
-          title="View next slide"
+          aria-label="Click, tap, or press right to show the next slide"
+          title="Click, tap, or press right to show the next slide"
         >
           <span class="fa fa-arrow-right fa-lg" aria-hidden="true"></span>
         </a>
@@ -61,6 +61,10 @@ export default {
   },
   mounted () {
     this.resumeAutoSlideTimer()
+    window.addEventListener('keyup', this.handleKeyUpEvents)
+  },
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.handleKeyUpEvents)
   },
   data () {
     return {
@@ -71,6 +75,13 @@ export default {
     }
   },
   methods: {
+    handleKeyUpEvents (event) {
+      if (event.keyCode === 37) {
+        this.showPreviousSlide()
+      } else if (event.keyCode === 39) {
+        this.showNextSlide()
+      }
+    },
     pauseAutoSlideTimer () {
       if (this.autoSlideTimer) {
         clearInterval(this.autoSlideTimer)
