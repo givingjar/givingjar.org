@@ -6,10 +6,10 @@
         class="slide"
         :class="{
           startSlide: index === activeSlide && !previousSlide,
-          fadeInFromLeft: index === activeSlide && activeSlide < previousSlide,
-          fadeInFromRight: index === activeSlide && activeSlide > previousSlide,
-          fadeOutToLeft: index === previousSlide && activeSlide > previousSlide,
-          fadeOutToRight: index === previousSlide && activeSlide < previousSlide
+          fadeInFromLeft: index === activeSlide && isDirectionPrevious(),
+          fadeInFromRight: index === activeSlide && isDirectionNext(),
+          fadeOutToLeft: index === previousSlide && isDirectionNext(),
+          fadeOutToRight: index === previousSlide && isDirectionPrevious()
         }"
       >
         <slot :name="slotName"/>
@@ -70,6 +70,7 @@ export default {
     return {
       activeSlide: 0,
       autoSlideTimer: null,
+      direction: null,
       previousSlide: null,
       totalSlides: Object.keys(this.$slots).length
     }
@@ -82,6 +83,12 @@ export default {
         this.showNextSlide()
       }
     },
+    isDirectionNext () {
+      return this.direction === 'next'
+    },
+    isDirectionPrevious () {
+      return this.direction === 'prev'
+    },
     pauseAutoSlideTimer () {
       if (this.autoSlideTimer) {
         clearInterval(this.autoSlideTimer)
@@ -92,12 +99,19 @@ export default {
       this.pauseAutoSlideTimer()
       this.autoSlideTimer = setInterval(this.showNextSlide, 8000)
     },
+    setDirectionNext () {
+      this.direction = 'next'
+    },
+    setDirectionPrevious () {
+      this.direction = 'prev'
+    },
     showNextSlide () {
       const nextSlide = this.activeSlide < this.totalSlides - 1
         ? this.activeSlide + 1
         : 0
 
       this.showSpecificSlide(nextSlide)
+      this.setDirectionNext()
     },
     showPreviousSlide () {
       const previousSlide = this.activeSlide > 0
@@ -105,11 +119,19 @@ export default {
         : this.totalSlides - 1
 
       this.showSpecificSlide(previousSlide)
+      this.setDirectionPrevious()
     },
     showSpecificSlide (selectedSlide) {
       if (this.activeSlide !== selectedSlide) {
         this.previousSlide = this.activeSlide
         this.activeSlide = selectedSlide
+
+        if (this.activeSlide > this.previousSlide) {
+          this.setDirectionNext()
+        } else {
+          this.setDirectionPrevious()
+        }
+
         this.resumeAutoSlideTimer()
       }
     },
