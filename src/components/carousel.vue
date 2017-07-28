@@ -5,6 +5,7 @@
         v-for="(slots, slotName, index) in $slots"
         class="slide"
         :class="{
+          activeSlide: index === activeSlide,
           startSlide: index === activeSlide && !previousSlide,
           fadeInFromLeft: index === activeSlide && isDirectionPrevious(),
           fadeInFromRight: index === activeSlide && isDirectionNext(),
@@ -165,6 +166,9 @@ $animation-duration = 2s
   overflow: hidden
   position: relative
   white-space: nowrap
+
+.activeSlide
+  z-index: 100000
 
 .picker
   animation-duration: $animation-duration
