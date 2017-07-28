@@ -186,6 +186,7 @@ $animation-duration = 2s
   align-items: center
   display: flex
   opacity: 0
+  padding: 0 5px
   position: absolute
   white-space: normal
 
