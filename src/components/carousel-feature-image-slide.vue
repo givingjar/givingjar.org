@@ -6,7 +6,7 @@
         <h2>{{ title }}</h2>
         <p>{{ subtitle }}</p>
       </div>
-      <input type="button" value="Read More"></input>
+      <input type="button" value="Read More" @click="goToLinkUrl"></input>
     </figcaption>
   </figure>
 </template>
@@ -29,6 +29,11 @@ export default {
     title: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    goToLinkUrl () {
+      location.href = this.linkUrl
     }
   }
 }
