@@ -1,6 +1,6 @@
 <template>
   <figure slot="0">
-    <img :src="imageUrl" :alt="title">
+    <img :src="imageUrl" :alt="'Featured image for ' + title">
     <figcaption>
       <div class="summary">
         <h2>{{ title }}</h2>
