@@ -73,9 +73,9 @@ describe('site-nav.vue', () => {
     mockvm.showLogo = true
     mockvm.showMenu = true
     mockvm.onWindowScroll()
-    expect(mockvm.shrinkNav).to.be.true
-    expect(mockvm.showLogo).to.be.false
-    expect(mockvm.showMenu).to.be.false
+    expect(mockvm.shrinkNav).to.equal(true)
+    expect(mockvm.showLogo).to.equal(false)
+    expect(mockvm.showMenu).to.equal(false)
   })
 
   it('scrolling to page top expands and resets navigation', () => {
@@ -86,9 +86,9 @@ describe('site-nav.vue', () => {
     mockvm.showLogo = false
     mockvm.showMenu = false
     mockvm.onWindowScroll()
-    expect(mockvm.shrinkNav).to.be.false
-    expect(mockvm.showLogo).to.be.true
-    expect(mockvm.showMenu).to.be.false
+    expect(mockvm.shrinkNav).to.equal(false)
+    expect(mockvm.showLogo).to.equal(true)
+    expect(mockvm.showMenu).to.equal(false)
   })
 
   it('initial scroll position is 0', () => {
