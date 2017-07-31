@@ -165,7 +165,7 @@ $animation-duration = 2s
 #all-slides
   display: flex
   justify-content: center
-  overflow: hidden
+  overflow: visible
   position: relative
   white-space: nowrap
 
