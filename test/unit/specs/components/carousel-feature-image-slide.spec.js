@@ -14,10 +14,19 @@ const newFeatureImageSlide = () => {
 }
 
 describe('carousel-feature-image-slide.vue', () => {
-  it('contains image with specified source', () => {
+  it('contains specified image', () => {
     const vm = newFeatureImageSlide()
-
     expect(vm.$el.querySelector('img').src)
       .to.equal('https://somesite.com/fake.jpg')
+  })
+
+  it('contains provided title', () => {
+    const vm = newFeatureImageSlide()
+    expect(vm.$el.textContent).to.contain('This is your Slide')
+  })
+
+  it('contains provided subtitle', () => {
+    const vm = newFeatureImageSlide()
+    expect(vm.$el.textContent).to.contain('It could be better')
   })
 })
