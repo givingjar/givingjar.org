@@ -1,5 +1,5 @@
 module.exports = {
-  'phone size shows small nav with dropdown menu': function (browser) {
+  'phone size shows small nav with dropdown menu': browser => {
     browser
       .phoneSize()
       .url(browser.globals.devServerURL)
@@ -17,7 +17,7 @@ module.exports = {
       .end()
   },
 
-  'tablet size shows medium nav with dropdown menu': function (browser) {
+  'tablet size shows medium nav with dropdown menu': browser => {
     browser
       .tabletSize()
       .url(browser.globals.devServerURL)
@@ -35,7 +35,7 @@ module.exports = {
       .end()
   },
 
-  'desktop size shows full nav with list of links': function (browser) {
+  'desktop size shows full nav with list of links': browser => {
     browser
       .desktopSize()
       .url(browser.globals.devServerURL)
@@ -50,7 +50,7 @@ module.exports = {
       .end()
   },
 
-  'menu disappears and nav shrinks when scrolling': function (browser) {
+  'menu disappears and nav shrinks when scrolling': browser => {
     browser
       .tabletSize()
       .url(browser.globals.devServerURL)
