@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ 'small-nav': shrinkNav }">
+  <nav id="site-nav" :class="{ 'small-nav': shrinkNav }">
     <div class="action-row">
       <div>
         <router-link to="/" class="brand">Giving Jar</router-link>

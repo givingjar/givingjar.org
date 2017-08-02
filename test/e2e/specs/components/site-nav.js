@@ -3,7 +3,7 @@ module.exports = {
     browser
       .phoneSize()
       .url(browser.globals.devServerURL)
-      .waitForElementVisible('nav', 5000)
+      .waitForElementVisible('#site-nav', 5000)
       .assert.visible('a.brand')
       .assert.visible('button.menu-toggle')
       .assert.hidden('div.menu-links')
@@ -21,7 +21,7 @@ module.exports = {
     browser
       .tabletSize()
       .url(browser.globals.devServerURL)
-      .waitForElementVisible('nav', 5000)
+      .waitForElementVisible('#site-nav', 5000)
       .assert.visible('a.brand')
       .assert.visible('button.menu-toggle')
       .assert.hidden('div.menu-links')
@@ -39,7 +39,7 @@ module.exports = {
     browser
       .desktopSize()
       .url(browser.globals.devServerURL)
-      .waitForElementVisible('nav', 5000)
+      .waitForElementVisible('#site-nav', 5000)
       .assert.visible('a.brand')
       .assert.hidden('button.menu-toggle')
       .assert.visible('div.menu-links')
@@ -54,7 +54,7 @@ module.exports = {
     browser
       .tabletSize()
       .url(browser.globals.devServerURL)
-      .waitForElementVisible('nav', 5000)
+      .waitForElementVisible('#site-nav', 5000)
       .assert.visible('div.logo')
       .assert.cssProperty('nav', 'padding-bottom', '25px')
       .click('button.menu-toggle')
