@@ -21,8 +21,8 @@ const newSiteNav = () => {
 describe('site-nav.vue', () => {
   it('shows logo when scrolling near top and menu is not shown', () => {
     const vm = newSiteNav()
-    expect(typeof vm.resetShowLogo).to.equal('function')
-    expect(typeof vm.verticalOffset).to.equal('function')
+    expect(vm.resetShowLogo).to.be.a('function')
+    expect(vm.verticalOffset).to.be.a('function')
 
     const simulateResetShowLogo = (showMenu, pageYOffset, expectedResult) => {
       const mockvm = mockSiteNav(pageYOffset)
@@ -43,7 +43,7 @@ describe('site-nav.vue', () => {
   })
 
   it('toggles menu and logo when menu button is clicked', () => {
-    expect(typeof newSiteNav().toggleMenu).to.equal('function')
+    expect(newSiteNav().toggleMenu).to.be.a('function')
 
     const simulateToggleMenu = expectedResult => {
       const mockvm = mockSiteNav(0)
@@ -66,7 +66,7 @@ describe('site-nav.vue', () => {
   })
 
   it('scrolling past 50px shrinks and resets navigation', () => {
-    expect(typeof newSiteNav().onWindowScroll).to.equal('function')
+    expect(newSiteNav().onWindowScroll).to.be.a('function')
 
     const mockvm = mockSiteNav(51)
     mockvm.shrinkNav = false
@@ -79,7 +79,7 @@ describe('site-nav.vue', () => {
   })
 
   it('scrolling to page top expands and resets navigation', () => {
-    expect(typeof newSiteNav().onWindowScroll).to.equal('function')
+    expect(newSiteNav().onWindowScroll).to.be.a('function')
 
     const mockvm = mockSiteNav(0)
     mockvm.shrinkNav = true
@@ -93,7 +93,7 @@ describe('site-nav.vue', () => {
 
   it('initial scroll position is 0', () => {
     const vm = newSiteNav()
-    expect(typeof vm.verticalOffset).to.equal('function')
+    expect(vm.verticalOffset).to.be.a('function')
     expect(vm.verticalOffset()).to.equal(0)
   })
 })

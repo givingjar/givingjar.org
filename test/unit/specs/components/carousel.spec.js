@@ -3,13 +3,13 @@ import Carousel from '@/components/carousel'
 
 const newCarousel = () => {
   return new Vue({
-    template: [
-      '<Carousel>',
-      '<h1 slot="0">Slot 0</h1>',
-      '<h1 slot="1">Slot 1</h1>',
-      '<h1 slot="2">Slot 2</h1>',
-      '</Carousel>'
-    ].join(''),
+    template: `
+      <Carousel>
+        <h1 slot="0">Slot 0</h1>
+        <h1 slot="1">Slot 1</h1>
+        <h1 slot="2">Slot 2</h1>
+      </Carousel>'
+    `,
     components: { Carousel }
   }).$mount()
 }
@@ -17,14 +17,12 @@ const newCarousel = () => {
 describe('carousel.vue', () => {
   it('contains one slide per slot', () => {
     const vm = newCarousel()
-    expect(vm.$el.getElementsByClassName('slide').length)
-      .to.equal(3)
+    expect(vm.$el.getElementsByClassName('slide').length).to.equal(3)
   })
 
   it('contains one navigation picker per slot', () => {
     const vm = newCarousel()
-    expect(vm.$el.getElementsByClassName('picker').length)
-      .to.equal(3)
+    expect(vm.$el.getElementsByClassName('picker').length).to.equal(3)
   })
 
   it('contains previous and next navigation links', () => {
