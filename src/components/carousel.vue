@@ -3,6 +3,7 @@
     <div id="all-slides">
       <div
         v-for="(slots, slotName, index) in $slots"
+        :id="'slide-' + index"
         class="slide"
         :class="{
           activeSlide: index === activeSlide,
@@ -19,6 +20,7 @@
     <nav>
       <div>
         <a
+          id="show-previous-slide"
           @click="showPreviousSlide"
           aria-label="Click, tap, or press left to show the previous slide"
           title="Click, tap, or press left to show the previous slide"
@@ -27,6 +29,7 @@
         </a>
         <a
           v-for="(slots, slotName, index) in $slots"
+          :id="'show-slide-' + index"
           @click="showSpecificSlide(index)"
           :aria-label="'View slide ' + (index + 1)"
           :title="'View slide ' + (index + 1)"
@@ -39,6 +42,7 @@
         >
         </a>
         <a
+          id="show-next-slide"
           @click="showNextSlide"
           aria-label="Click, tap, or press right to show the next slide"
           title="Click, tap, or press right to show the next slide"
