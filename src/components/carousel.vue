@@ -1,6 +1,6 @@
 <template>
   <section id="carousel" v-resize="updateHeight">
-    <div id="all-slides">
+    <div id="all-slides" :style="{ height: tallestSlideHeight }">
       <div
         v-for="(slots, slotName, index) in $slots"
         :id="'slide-' + index"
@@ -13,6 +13,7 @@
           fadeOutToLeft: index === previousSlide && isDirectionNext(),
           fadeOutToRight: index === previousSlide && isDirectionPrevious()
         }"
+        :style="{ height: tallestSlideHeight }"
       >
         <slot :name="slotName"/>
       </div>
@@ -77,6 +78,7 @@ export default {
       autoSlideTimer: null,
       direction: null,
       previousSlide: null,
+      tallestSlideHeight: '0',
       totalSlides: Object.keys(this.$slots).length
     }
   },
@@ -141,18 +143,9 @@ export default {
       }
     },
     updateHeight () {
-      let maxHeight = 0
-      Object.keys(this.$slots).forEach(slotKey => {
-        const slot = this.$slots[slotKey][0]
-        if (slot.elm.clientHeight > maxHeight) {
-          maxHeight = slot.elm.clientHeight
-        }
-      })
-      document.getElementById('all-slides').style.height = maxHeight + 'px'
-      const slides = document.getElementsByClassName('slide')
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.height = maxHeight + 'px'
-      }
+      const heights = Object.keys(this.$slots)
+        .map(slotKey => this.$slots[slotKey][0].elm.clientHeight)
+      this.tallestSlideHeight = Math.max(...heights) + 'px'
     }
   }
 }

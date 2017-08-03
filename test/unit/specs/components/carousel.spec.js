@@ -61,4 +61,13 @@ describe('carousel.vue', () => {
     vm.showSpecificSlide(2)
     expect(vm.$data.activeSlide).to.equal(2)
   })
+
+  it('changes slides when arrow keys are pressed', () => {
+    const vm = newCarousel().$refs.carousel
+    expect(vm.$data.activeSlide).to.equal(0)
+    vm.handleKeyUpEvents({ keyCode: 39 })
+    expect(vm.$data.activeSlide).to.equal(1)
+    vm.handleKeyUpEvents({ keyCode: 37 })
+    expect(vm.$data.activeSlide).to.equal(0)
+  })
 })
