@@ -1,5 +1,5 @@
 <template>
-  <section id="carousel" v-resize="updateHeight">
+  <div id="carousel" v-resize="updateHeight">
     <div id="all-slides" :style="{ height: tallestSlideHeight }">
       <div
         v-for="(slots, slotName, index) in $slots"
@@ -52,7 +52,7 @@
         </a>
       </div>
     </nav>
-  </section>
+  </div>
 </template>
 
 <script>

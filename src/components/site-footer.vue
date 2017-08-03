@@ -74,7 +74,7 @@ footer
   display: flex
   flex-wrap: wrap
   font-size: 1.4rem
-  margin-top: 50px
+  margin-top: 0
   padding: 5px 15px 0
   width: 100%
 

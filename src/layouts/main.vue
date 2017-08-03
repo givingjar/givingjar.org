@@ -23,17 +23,9 @@ export default {
 @import '../_theme'
 
 main
-  box-sizing: border-box
   margin-left: auto
   margin-right: auto
-  padding: 0 15px
+  padding: 0
   position: relative
-
-@media (min-width: $screen-tablet-min)
-  main
-    width: 750px
-
-@media (min-width: $screen-desktop-min)
-  main
-    width: 970px
+  width: 100%
 </style>
