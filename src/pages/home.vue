@@ -31,9 +31,6 @@
     <Row>
       <Hello/>
     </Row>
-    <Row>
-      <Hello/>
-    </Row>
   </Layout>
 </template>
 

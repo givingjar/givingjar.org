@@ -156,9 +156,6 @@ export default {
 
 $animation-duration = 2s
 
-#carousel
-  margin-bottom: 2rem
-
 #all-slides
   display: flex
   justify-content: center
@@ -202,7 +199,7 @@ $animation-duration = 2s
 nav
   padding: 1px 0 0
   background-color: $control-border-color
-  background-image: linear-gradient(to right, #fff, $control-border-color 20%, $control-border-color 80%, #fff)
+  background-image: linear-gradient(to right, $base-background-color, $control-border-color 20%, $control-border-color 80%, $base-background-color)
   text-align: center
   white-space: nowrap
   width: 100%
@@ -211,7 +208,7 @@ nav
     cursor: pointer
 
   div
-    background-color: #fff
+    background-color: $base-background-color
 
 //
 // CAROUSEL ANIMATIONS
