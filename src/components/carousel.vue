@@ -3,6 +3,7 @@
     <div id="all-slides" :style="{ height: tallestSlideHeight }">
       <div
         v-for="(slots, slotName, index) in $slots"
+        :key="slotName"
         :id="'slide-' + index"
         class="slide"
         :class="{
@@ -30,6 +31,7 @@
         </a>
         <a
           v-for="(slots, slotName, index) in $slots"
+          :key="slotName"
           :id="'show-slide-' + index"
           @click="showSpecificSlide(index)"
           :aria-label="'View slide ' + (index + 1)"
