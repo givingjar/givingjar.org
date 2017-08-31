@@ -4,20 +4,28 @@
       <Carousel>
         <FeatureImageSlide
           slot="0"
+          imageUrl="static/img/card/giving-jar-shopper-amazon-screenshot.jpg"
+          title="Try our free browser add-on"
+          subtitle="Pick your favorite Lansing charity and we'll remind you to donate when you shop online. Your charity receives 100%."
+          linkUrl="http://bit.ly/GivingJarShopper"
+          linkText="Try it!"
+        />
+        <FeatureImageSlide
+          slot="1"
           imageUrl="https://blog.givingjar.org/img/spotlight/men-making-a-difference/men-making-a-difference-cookout.jpg"
           title="Charity Spotlight: Men Making a Difference"
           subtitle="Demonstrating the importance of family and volunteerism in our community."
           linkUrl="https://blog.givingjar.org/charity-spotlight-men-making-a-difference/"
         />
         <FeatureImageSlide
-          slot="1"
+          slot="2"
           imageUrl="https://blog.givingjar.org/img/spotlight/leonies-longing/leonies-longing-logo.jpg"
           title="Charity Spotlight: Leonie's Longing"
           subtitle="A community of support for women who have returned to lay life from one of religion."
           linkUrl="https://blog.givingjar.org/charity-spotlight-leonies-longing/"
         />
         <FeatureImageSlide
-          slot="2"
+          slot="3"
           imageUrl="https://blog.givingjar.org/img/paypal-giving-fund/ppgf-do-more-good.jpg"
           title="How To: Enroll in PayPal Giving Fund"
           subtitle="Get 100% of every PayPal donation and open up new ways to raise funds online."

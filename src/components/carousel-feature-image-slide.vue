@@ -1,12 +1,12 @@
 <template>
-  <figure slot="0">
+  <figure>
     <img :src="imageUrl" :alt="'Featured image for ' + title">
     <figcaption>
       <div class="summary">
         <h2>{{ title }}</h2>
         <p>{{ subtitle }}</p>
       </div>
-      <input type="button" value="Read More" @click="goToLinkUrl"></input>
+      <input type="button" :value="linkText" @click="goToLinkUrl"></input>
     </figcaption>
   </figure>
 </template>
@@ -17,6 +17,11 @@ export default {
     imageUrl: {
       type: String,
       required: true
+    },
+    linkText: {
+      type: String,
+      required: false,
+      default: 'Read More'
     },
     linkUrl: {
       type: String,
@@ -33,7 +38,7 @@ export default {
   },
   methods: {
     goToLinkUrl () {
-      location.href = this.linkUrl
+      window.open(this.linkUrl, '_blank')
     }
   }
 }
