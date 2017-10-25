@@ -4,9 +4,9 @@
       <Carousel>
         <FeatureImageSlide
           slot="0"
-          imageUrl="static/img/card/giving-jar-shopper-amazon-screenshot.jpg"
-          title="Try our free browser add-on"
-          subtitle="Pick your favorite Lansing charity and we'll remind you to donate when you shop online. Your charity receives 100%."
+          imageUrl="static/img/card/giving-jar-shopper-retail-logos.png"
+          title="Donate when you shop online"
+          subtitle="Our free browser add-on offers small reminders to donate when you shop online. You pick the charity and they get 100%."
           linkUrl="http://bit.ly/GivingJarShopper"
           linkText="Try it!"
         />
@@ -34,7 +34,22 @@
       </Carousel>
     </Row>
     <Row>
-      <Hello/>
+      <h1>Our Mission</h1>
+      <blockquote>
+        Our mission is to make it easy to find nonprofits and donate to them online.
+      </blockquote>
+
+      <h2>How we do it</h2>
+
+      <div>
+        <h3>Make donation technology accessible</h3>
+        <p>
+          Nonprofits deserve more than a donate button on their website. We offer
+          free technical assistance to nonprofits that want to enroll in many online
+          fundraising tools such as Facebook, PayPal Giving Fund, and CyberGrants.
+
+        </p>
+      </div>
     </Row>
     <Row>
       <Hello/>

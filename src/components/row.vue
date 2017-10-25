@@ -25,6 +25,14 @@ div.row
   &:nth-child(even)
     background-color: $brand-colors-calm
 
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+    text-align: center
+
 div.content
   margin-left: auto
   margin-right: auto
