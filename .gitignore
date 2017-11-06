@@ -1,4 +1,6 @@
 # project
+dist/
+test/
 node_modules
 _site
 .sass-cache
@@ -8,3 +10,4 @@ _site
 .DS_Store
 Thumbs.db
 ehthumbs.db
+*.log
