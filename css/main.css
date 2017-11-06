@@ -413,3 +413,8 @@ footer {
 .flashy {
   color: #fff;
 }
+
+#video-giveaway {
+  animation: tada 1s;
+  animation-delay: 1s;
+}
