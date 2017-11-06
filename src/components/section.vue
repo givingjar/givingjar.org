@@ -1,9 +1,9 @@
 <template>
-  <div class="row">
+  <section>
     <div class="content">
       <slot></slot>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
 <style lang="stylus">
 @import '../_theme'
 
-div.row
+section
   padding-bottom: 15px
   margin: 0
 
@@ -24,6 +24,10 @@ div.row
 
   &:nth-child(even)
     background-color: $brand-colors-calm
+
+  blockquote
+    border-left: 2px solid $brand-colors-action
+    padding-left: 10px
 
   h1
   h2

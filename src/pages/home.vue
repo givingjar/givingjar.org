@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Row>
+    <Section>
       <Carousel>
         <FeatureImageSlide
           slot="0"
@@ -32,28 +32,32 @@
           linkUrl="https://blog.givingjar.org/how-to-enroll-in-paypal-giving-fund/"
         />
       </Carousel>
-    </Row>
-    <Row>
+    </Section>
+    <Section>
       <h1>Our Mission</h1>
+      <p>
+        Giving Jar is a 501(c)(3) nonprofit located in Lansing, Michigan.
+      </p>
       <blockquote>
         Our mission is to make it easy to find nonprofits and donate to them online.
       </blockquote>
-
-      <h2>How we do it</h2>
-
+      <p>
+        We help local nonprofits share their cause online, setup online fundraising
+        software, and create new ways for donors to contribute to their charity of
+        choice.
+      </p>
+    </Section>
+    <Section>
+      <h1>Our Services</h1>
       <div>
         <h3>Make donation technology accessible</h3>
         <p>
           Nonprofits deserve more than a donate button on their website. We offer
           free technical assistance to nonprofits that want to enroll in many online
           fundraising tools such as Facebook, PayPal Giving Fund, and CyberGrants.
-
         </p>
       </div>
-    </Row>
-    <Row>
-      <Hello/>
-    </Row>
+    </Section>
   </Layout>
 </template>
 
@@ -62,11 +66,11 @@ import Carousel from '@/components/carousel'
 import FeatureImageSlide from '@/components/carousel-feature-image-slide'
 import Hello from '@/components/hello'
 import Layout from '@/layouts/main'
-import Row from '@/components/row'
+import Section from '@/components/section'
 
 export default {
   components: {
-    Carousel, FeatureImageSlide, Hello, Layout, Row
+    Carousel, FeatureImageSlide, Hello, Layout, Section
   }
 }
 </script>
