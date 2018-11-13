@@ -418,3 +418,20 @@ footer {
   animation: tada 1s;
   animation-delay: 1s;
 }
+
+.takeover-background {
+  background-color: rgba(0, 0, 0, .8);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.takeover-container {
+  background-color: white;
+  border-radius: 1rem;
+  margin: 2rem;
+  padding: 2rem;
+}
