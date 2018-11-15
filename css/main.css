@@ -458,6 +458,10 @@ footer {
   padding: 2rem;
 }
 
+.takeover-container .donate-link {
+  text-decoration: none;
+}
+
 .takeover-container .call-to-action {
   display: block;
   font-size: 1rem;
