@@ -431,6 +431,14 @@ footer {
   top: 0;
 }
 
+.takeover-close-icon {
+  cursor: pointer;
+  float: left;
+  left: -1.5rem;
+  position: relative;
+  top: -1.5rem;
+}
+
 .takeover-container {
   background-color: white;
   border-radius: 1rem;
