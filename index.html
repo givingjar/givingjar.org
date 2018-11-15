@@ -162,6 +162,7 @@
 
   <div class="takeover-background">
     <div class="takeover-container">
+      <i class="takeover-close-icon fa fa-times fa-lg" title="Click or press Escape to close this popup"></i>
       <h1>
         <img src="/images/other/giving-tuesday-heart.png" alt="giving tuesday heart">
         Giving Tuesday Takeover
@@ -198,6 +199,7 @@
 
     function showTakeover () {
       $('.takeover-background').show()
+      $('.takeover-close-icon').click(hideTakeover)
       $(document).keyup(function (event) {
         if (event.key === 'Escape' || event.which === 27) {
           hideTakeover()
