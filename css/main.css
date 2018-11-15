@@ -460,6 +460,7 @@ footer {
 }
 
 .takeover-container figure {
+  margin: 0 0 2rem;
   text-align: center;
 }
 
@@ -486,8 +487,22 @@ footer {
   height: 2.5rem;
 }
 
-@media (min-width: 751px) {
+.takeover-container .row {
+  margin: 0 2rem;
+}
+
+.takeover-container .one-half {
+  width: 100%;
+}
+
+@media (min-width: 750px) {
   .takeover-container h1 > img {
     height: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .takeover-container .one-half {
+    width: 48%;
   }
 }
