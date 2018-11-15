@@ -510,6 +510,7 @@ footer {
 }
 
 .takeover-container .one-half {
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -533,6 +534,7 @@ footer {
 
 @media (min-width: 1200px) {
   .takeover-container .one-half {
-    width: 48%;
+    padding: 1rem;
+    width: 50%;
   }
 }
