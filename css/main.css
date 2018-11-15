@@ -421,11 +421,24 @@ footer {
 
 /* Charity Takeover styles */
 
+.noscroll {
+  overflow: hidden;
+}
+
+[aria-hidden="true"] {
+  display: none;
+
+}
+
+[aria-hidden="false"] {
+  display: block;
+}
+
 .takeover-background {
   background-color: rgba(0, 0, 0, .8);
   bottom: 0;
-  display: none;
   left: 0;
+  overflow-y: scroll;
   position: fixed;
   right: 0;
   top: 0;
@@ -446,9 +459,21 @@ footer {
   padding: 2rem;
 }
 
+.takeover-container figure {
+  text-align: center;
+}
+
+.takeover-container figure img {
+  max-width: 100%;
+}
+
 .takeover-container h1 {
   color: #344A80;
   text-align: center;
+}
+
+.takeover-container h2 {
+  font-size: 3rem;
 }
 
 .takeover-container hr {
