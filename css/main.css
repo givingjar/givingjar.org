@@ -419,6 +419,8 @@ footer {
   animation-delay: 1s;
 }
 
+/* Charity Takeover styles */
+
 .takeover-background {
   background-color: rgba(0, 0, 0, .8);
   bottom: 0;
@@ -434,4 +436,24 @@ footer {
   border-radius: 1rem;
   margin: 2rem;
   padding: 2rem;
+}
+
+.takeover-container h1 {
+  text-align: center;
+}
+
+.takeover-container hr {
+  border-top: 3px solid #333;
+  margin-top: 1rem;
+  max-width: 50%;
+}
+
+.takeover-container h1 > img {
+  height: 2.5rem;
+}
+
+@media (min-width: 751px) {
+  .takeover-container h1 > img {
+    height: 3.5rem;
+  }
 }
