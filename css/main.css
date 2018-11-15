@@ -446,10 +446,9 @@ footer {
 
 .takeover-close-icon {
   cursor: pointer;
-  float: left;
-  left: -1.5rem;
-  position: relative;
-  top: -1.5rem;
+  left: 2.5rem;
+  position: absolute;
+  top: 2.5rem;
 }
 
 .takeover-container {
@@ -457,6 +456,20 @@ footer {
   border-radius: 1rem;
   margin: 2rem;
   padding: 2rem;
+}
+
+.takeover-container .call-to-action {
+  display: block;
+  font-size: 2rem;
+  height: initial;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  max-width: 80%;
+  padding: 1rem;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .takeover-container figure {
