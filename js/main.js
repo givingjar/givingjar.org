@@ -55,4 +55,6 @@ if (now >= startDate && now <= endDate) {
     link.classList.toggle('takeover-link', false)
   })
   showTakeover()
+} else {
+  hideTakeover()
 }
