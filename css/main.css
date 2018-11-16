@@ -461,6 +461,10 @@ footer {
   padding: 2rem;
 }
 
+.takeover-container .takeover-video {
+  margin: 0 auto 4rem;
+}
+
 .takeover-container .donate-link {
   text-decoration: none;
 }
@@ -530,6 +534,10 @@ footer {
     line-height: 2.5rem;
   }
 
+  .takeover-container .takeover-video {
+    max-width: 60%;
+  }
+  
   .takeover-container h1 > img {
     height: 3.5rem;
   }
