@@ -212,47 +212,6 @@
   <script type="text/javascript" src="/js/jquery.scrollTo-2.1.2.min.js"></script>
   <script type="text/javascript" src="/js/jquery.localScroll-1.4.0.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62666024-4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date())
-    gtag('config', 'UA-62666024-4')
-
-    $.localScroll()
-
-    $('#mc-embedded-subscribe-form').ajaxChimp({
-      callback: function(resp) {
-        if (resp.result === 'success') {
-          $('#mc-embedded-subscribe-form input').hide()
-          $('#mce-email-label').html('You&apos;ll receive a confirmation email soon. Thank you for your interest in Giving Jar! <i class="fa fa-heart"></i>')
-        }
-        $('#mc-embedded-subscribe-form a').attr('target', '_blank')
-      }
-    })
-
-    var takeover = document.querySelector('.takeover-background')
-    var takeoverCloseIcon = document.querySelector('.takeover-close-icon')
-
-    function showTakeover () {
-      document.body.classList.toggle('noscroll', true)
-      takeover.setAttribute('aria-hidden', false)
-      takeover.scrollTop = 0
-    }
-
-    function hideTakeover () {
-      document.body.classList.toggle('noscroll', false)
-      takeover.setAttribute('aria-hidden', true)
-      window.scrollTo(0, 0)
-      document.getElementById('mce-EMAIL').focus()
-    }
-
-    takeoverCloseIcon.addEventListener('click', hideTakeover)
-    document.addEventListener('keyup', function (event) {
-      if (event.key === 'Escape' || event.which === 27) {
-          hideTakeover()
-        }
-    })
-    showTakeover()
-  </script>
+  <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
