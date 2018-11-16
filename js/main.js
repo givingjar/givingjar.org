@@ -42,4 +42,10 @@ document.addEventListener('keyup', function (event) {
   }
 })
 
-showTakeover()
+var startDate = new Date('2018-11-20T00:00:00-0500').getTime()
+var endDate = new Date('2018-12-31T23:59:59-0500').getTime()
+var now = Date.now()
+
+if (now >= startDate && now <= endDate) {
+  showTakeover()
+}
