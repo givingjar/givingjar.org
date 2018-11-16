@@ -427,11 +427,14 @@ footer {
 
 [aria-hidden="true"] {
   display: none;
-
 }
 
 [aria-hidden="false"] {
-  display: block;
+  display: initial;
+}
+
+.takeover-link {
+  display: none !important;
 }
 
 .takeover-background {
