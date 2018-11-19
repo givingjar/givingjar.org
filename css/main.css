@@ -500,6 +500,12 @@ footer {
 
 .takeover-container h2 {
   font-size: 3rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.takeover-container h3 {
+  font-size: 3rem;
 }
 
 .takeover-container hr {
@@ -510,6 +516,10 @@ footer {
 
 .takeover-container h1 > img {
   height: 2.5rem;
+}
+
+.takeover-container .subheading {
+  margin-bottom: 3rem;
 }
 
 .takeover-container .row {
